@@ -38,8 +38,3 @@ export const Menu = styled.div`
   margin: 5%;
 `;
 
-export const MenuItem = styled.div`
-  
-
-
-`;
