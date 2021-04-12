@@ -35,10 +35,11 @@ export const Menu = styled.div`
   flex-direction: row;
   justify-content: space-between;
   min-width: 90%;
+  margin: 5%;
 `;
 
 export const MenuItem = styled.div`
-  margin: 5%;
+  
 
 
 `;

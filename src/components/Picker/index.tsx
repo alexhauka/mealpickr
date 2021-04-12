@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Preview, Description, Menu, MenuItem } from './styles';
 import PlaceholderImage from '../../assets/pizza.jpg'
-import {IoIosLeaf, IoMdPizza, IoIosStar } from 'react-icons/io'
+import {IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle } from 'react-icons/io'
 import {IconContext} from "react-icons"
 
 
@@ -19,16 +19,19 @@ const Picker: React.FC = () => {
         </Description>
         <Menu>
           <IconContext.Provider value={{
-            style: {fontSize: '30px', color: "white"}
+            style: {fontSize: '35px', color: "white"}
           }}>
           <MenuItem>
-            <IoIosLeaf/>
+            <IoIosRefreshCircle/>
+          </MenuItem>
+          <MenuItem>
+            <IoIosLeaf />
           </MenuItem>
           <MenuItem>
             <IoMdPizza />
           </MenuItem>
           <MenuItem>
-            <IoIosStar />
+            <IoIosCheckmarkCircle />
           </MenuItem>
           </IconContext.Provider>
         </Menu>
