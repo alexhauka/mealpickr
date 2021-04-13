@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     <>
       <Container>
         <p>
-          About goes here
+          Contact goes here
         </p>
       </Container>
     </>
