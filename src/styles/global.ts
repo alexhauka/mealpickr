@@ -27,4 +27,19 @@ export default createGlobalStyle`
     text-decoration: none;
     color: white;
   }
+
+  .columns {
+    -moz-column-count: 4;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 1em;
+  column-count: 4;
+  column-gap: 1em;
+  }
+
+  ul {
+    margin-top: 0;
+    list-style-type: none;
+    font-size: xx-small;
+  }
 `;

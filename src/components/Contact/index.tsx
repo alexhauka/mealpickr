@@ -5,15 +5,8 @@ const Contact: React.FC = () => {
   return (
     <>
       <Container>
-        <ul>
-          <li>
-            <a href="http://github.com/alexhauka">My Github</a>
-          </li>
-          <br></br>
-          <li>
-            <a href="mailto:alexhauka@gmail.com">My Email</a>
-          </li>
-        </ul>
+            <a href="http://github.com/alexhauka">Github</a>
+            <a href="mailto:alexhauka@gmail.com">Email</a>
       </Container>
     </>
   );
