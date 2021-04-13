@@ -29,17 +29,23 @@ export default createGlobalStyle`
   }
 
   .columns {
-    -moz-column-count: 4;
-  -moz-column-gap: 1em;
-  -webkit-column-count: 4;
-  -webkit-column-gap: 1em;
-  column-count: 4;
-  column-gap: 1em;
+  column-count: 2;
+  column-gap: 3em;
   }
 
   ul {
     margin-top: 0;
     list-style-type: none;
-    font-size: xx-small;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15%;
+  }
+
+  .larger {
+    height: 20px;
+    width: 20px;
   }
 `;

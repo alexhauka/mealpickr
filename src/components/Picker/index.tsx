@@ -12,7 +12,7 @@ const PlaceholderDescription: string = 'Lorem ipsum dolor sit amet, consectetur 
 const spoonacularAPI = process.env.SPOONACULAR_API
 
 const Picker: React.FC = () => {
-  const [view, setView] = useState("Intolerances")
+  const [view, setView] = useState("Welcome")
   return (
     <>
       <Container>
@@ -28,7 +28,7 @@ const Picker: React.FC = () => {
           <IconContext.Provider value={{
             style: {fontSize: '35px', color: "white"}
           }}>
-            <IoMdHeartDislike />
+            <IoMdHeartDislike onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}/>
             <IoIosLeaf />
             <IoMdPizza />
             <IoIosRefreshCircle/>
