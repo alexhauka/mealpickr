@@ -1,14 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Logo, Menu, MenuItem } from './styles';
  
 const Navbar: React.FC = () => {
   return (
     <>
       <Container>
-        <Logo>mealpickr</Logo>
+        <Logo>
+          <Link to="/">mealpickr</Link>
+        </Logo>
         <Menu>
-          <MenuItem>About</MenuItem>
-          <MenuItem>Contact</MenuItem>
+          <MenuItem>
+            <Link to="/about">About</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/contact">Contact</Link>
+          </MenuItem>
         </Menu>
       </Container>
     </>

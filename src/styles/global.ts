@@ -8,6 +8,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: monospace;
+    color: white;
   }
  
   #root {
@@ -20,5 +21,10 @@ export default createGlobalStyle`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;    
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 `;

@@ -1,13 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, RouteComponentProps } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './styles/global';
 import Navbar from './components/Navbar';
-import routes from './config/routes';
 import Picker from './components/Picker';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Promise from './components/Promise';
  
-const App: React.FC<{}> = props => {
+const App: React.FC = () => {
   return (
     <BrowserRouter>
       <GlobalStyle />
@@ -22,7 +23,11 @@ const App: React.FC<{}> = props => {
         <Route path="/contact">
           <Contact />
         </Route>
+        <Route path="/privacy">
+          <Promise />
+        </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 };

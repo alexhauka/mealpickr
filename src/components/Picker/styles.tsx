@@ -26,8 +26,6 @@ export const Preview = styled.img`
 export const Description = styled.div`
   width: 90%;
   margin-bottom: 5%;
-  color: white;
-
 `;
 
 export const Menu = styled.div`
