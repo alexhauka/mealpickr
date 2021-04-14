@@ -31,12 +31,14 @@ export const Description = styled.div`
 export const Menu = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   min-width: 90%;
   margin: 5%;
 `;
 
 export const ButtonGroup = styled.div`
-
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
 `;
 

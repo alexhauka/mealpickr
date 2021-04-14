@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import BackgroundImage from '../assets/background.jpg';
- 
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -63,17 +63,28 @@ export default createGlobalStyle`
 
   .top-icon-button {
     border: 1px solid white;
-    padding: 5% 10%;
+    padding: 0.5%;
     cursor: pointer;
     float: left;
+    width: 33.3%;
+  }
+
+  .top-icon-button:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .top-icon-button:hover {
+    background-color: #ffffff57;
   }
 
   .top-icon-button:first-child {
-    border-radius: 25% 0 0 25%;
+    border-radius: 10% 0 0 10%;
   }
 
   .top-icon-button:last-child {
-    border-radius: 0 25% 25% 0;
+    border-radius: 0 10% 10% 0;
   }
 
   .top-icon-button:not(:last-child) {

@@ -32,13 +32,19 @@ const Picker: React.FC = () => {
         </>}
         <Menu>
           <IconContext.Provider value={{
-            style: {fontSize: '35px', color: "white"}
+            style: {fontSize: '4em', color: "white"}
           }}>
             <ButtonGroup>
               <IoMdHeartDislike className="top-icon-button" onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}/>
               <IoIosLeaf className="top-icon-button" onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}/>
               <IoMdPizza className="top-icon-button" onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}/>
             </ButtonGroup>
+          </IconContext.Provider>
+        </Menu>
+        <Menu>
+          <IconContext.Provider value={{
+              style: {fontSize: '35px', color: "white"}
+            }}>
             <IoIosRefreshCircle/>
             <IoIosCheckmarkCircle />
           </IconContext.Provider>
