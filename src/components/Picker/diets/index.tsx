@@ -10,7 +10,15 @@ const Diets: React.FC = () => {
   return (
     <Container>
       <ul className="columns">
-      {dietArray.map((item, index: number) => <li className="diets-list"><input type="checkbox" className="larger" key={index} value={item}/>&nbsp;{item}</li>
+      {dietArray.map((item, index: number) => <li
+      key={index}
+      className="diets-list">
+      <input
+      type="checkbox"
+      className="larger"
+      value={item}/>
+        &nbsp;{item}
+      </li>
       )}
       </ul>
       <Description style={{textAlign: 'center'}}>

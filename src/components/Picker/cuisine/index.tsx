@@ -10,7 +10,15 @@ const Cuisine: React.FC = () => {
   return (
     <Container>
       <ul className="columns">
-      {cuisineArray.map((item, index: number) => <li className="cuisine-list"><input type="checkbox" className="larger" key={index} value={item}/>&nbsp;{item}</li>
+      {cuisineArray.map((item, index: number) => <li
+      key={index}
+      className="cuisine-list">
+      <input
+      type="checkbox"
+      className="larger"
+      value={item}/>
+        &nbsp;{item}
+      </li>
       )}
       </ul>
       <Description style={{textAlign: 'center'}}>
