@@ -7,10 +7,31 @@ import Cuisine from './cuisine';
 import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike } from 'react-icons/io'
 import { IconContext } from "react-icons"
 
-const spoonacularAPI = process.env.SPOONACULAR_API
-
 const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
+  const [meals, setMeals] = useState(null)
+
+  const fetchURL = 'https://api.spoonacular.com/recipes/complexSearch?';
+  const apiKey = process.env.REACT_APP_SPOONACULAR_API;
+
+  function getMeals() {
+
+    fetch(
+      `${fetchURL}apiKey=${apiKey}`
+    )
+    .then(response => response.json())
+    .then(data => {
+      //testing
+      console.log("data: ", data)
+      setMeals(data.results)
+      console.log("meals: ", meals)
+    })
+    .catch(() => {
+      console.error("error getting meals")
+    })
+
+  }
+
   return (
     <>
       <Container>
@@ -30,25 +51,32 @@ const Picker: React.FC = () => {
         <>
           <Cuisine />
         </>}
-        <Menu>
-          <IconContext.Provider value={{
-            style: {fontSize: '4em', color: "white"}
-          }}>
+        <IconContext.Provider value={{
+          style: {fontSize: '4em', color: "white"}
+        }}>
+          <Menu>
             <ButtonGroup>
-              <IoMdHeartDislike className="top-icon-button" onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}/>
-              <IoIosLeaf className="top-icon-button" onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}/>
-              <IoMdPizza className="top-icon-button" onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}/>
+              <IoMdHeartDislike
+                className="top-icon-button"
+                onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
+              />
+              <IoIosLeaf
+                className="top-icon-button"
+                onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}
+              />
+              <IoMdPizza
+                className="top-icon-button"
+                onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
+              />
             </ButtonGroup>
-          </IconContext.Provider>
-        </Menu>
-        <Menu>
-          <IconContext.Provider value={{
-              style: {fontSize: '35px', color: "white"}
-            }}>
-            <IoIosRefreshCircle/>
+          </Menu>
+          <ButtonGroup>
+            <IoIosRefreshCircle
+              onClick={(event: React.MouseEvent) => {getMeals()}}
+            />
             <IoIosCheckmarkCircle />
-          </IconContext.Provider>
-        </Menu>
+          </ButtonGroup>
+        </IconContext.Provider>
       </Container>
     </>
   );

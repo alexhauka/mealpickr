@@ -7,6 +7,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Promise from './components/Promise';
+
  
 const App: React.FC = () => {
   return (

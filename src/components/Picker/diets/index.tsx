@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Description } from './styles';
 
 const dietArray = ["Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Veggie", "Ovo-Veggie", "Vegan", "Pescetarian", "Paleo", "Primal", "Whole30"];

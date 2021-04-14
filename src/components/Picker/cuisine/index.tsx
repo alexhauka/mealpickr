@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Description } from './styles';
 
 const cuisineArray = ["African", "Caribbean", "Chinese", "French", "Indian", "Italian", "Japanese", "Mediterranean", "Mexican", "Middle-East", "Thai", "Vietnamese"];

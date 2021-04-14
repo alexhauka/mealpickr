@@ -40,5 +40,6 @@ export const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 95%;
+  padding-bottom: 10%;
 `;
 
