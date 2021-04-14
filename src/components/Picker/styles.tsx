@@ -36,3 +36,7 @@ export const Menu = styled.div`
   margin: 5%;
 `;
 
+export const ButtonGroup = styled.div`
+
+`;
+

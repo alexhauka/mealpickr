@@ -60,4 +60,23 @@ export default createGlobalStyle`
     height: 20px;
     width: 20px;
   }
+
+  .top-icon-button {
+    border: 1px solid white;
+    padding: 5% 10%;
+    cursor: pointer;
+    float: left;
+  }
+
+  .top-icon-button:first-child {
+    border-radius: 25% 0 0 25%;
+  }
+
+  .top-icon-button:last-child {
+    border-radius: 0 25% 25% 0;
+  }
+
+  .top-icon-button:not(:last-child) {
+    border-right: none;
+  }
 `;
