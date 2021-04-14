@@ -17,7 +17,7 @@ const Picker: React.FC = () => {
   function getMeals() {
 
     fetch(
-      `${fetchURL}apiKey=${apiKey}`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`
     )
     .then(response => response.json())
     .then(data => {
