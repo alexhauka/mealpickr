@@ -11,13 +11,13 @@ const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
   const [meals, setMeals] = useState(null)
 
-  const fetchURL = 'https://api.spoonacular.com/recipes/complexSearch?';
+  const fetchURL = 'https://api.spoonacular.com/recipes/complexSearch';
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
 
   function getMeals() {
 
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`
+      `${fetchURL}?apiKey=${apiKey}`
     )
     .then(response => response.json())
     .then(data => {
