@@ -3,6 +3,7 @@ import { Container, Menu } from './styles';
 import Welcome from './welcome';
 import Intolerances from './intolerances';
 import Diets from './diets';
+import Cuisine from './cuisine';
 import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike } from 'react-icons/io'
 import { IconContext } from "react-icons"
 
@@ -25,13 +26,17 @@ const Picker: React.FC = () => {
         <>
           <Diets />
         </>}
+        {view === "Cuisine" && 
+        <>
+          <Cuisine />
+        </>}
         <Menu>
           <IconContext.Provider value={{
             style: {fontSize: '35px', color: "white"}
           }}>
             <IoMdHeartDislike onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}/>
             <IoIosLeaf onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}/>
-            <IoMdPizza />
+            <IoMdPizza onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}/>
             <IoIosRefreshCircle/>
             <IoIosCheckmarkCircle />
           </IconContext.Provider>

@@ -30,7 +30,7 @@ export default createGlobalStyle`
 
   .columns {
   column-count: 2;
-  column-gap: 3em;
+  column-gap: 2em;
   }
 
   ul {
@@ -48,6 +48,12 @@ export default createGlobalStyle`
     display: flex;
     align-items: flex-end;
     margin-bottom: 15%;
+  }
+
+  .cuisine-list {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10%;
   }
 
   .larger {
