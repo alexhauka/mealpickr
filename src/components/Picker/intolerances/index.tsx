@@ -10,7 +10,7 @@ const Intolerances: React.FC = () => {
   return (
     <Container>
       <ul className="columns">
-      {intolerancesArray.map((item, index: number) => <li><input type="checkbox" className="larger" key={index} value={item}/>&nbsp;{item}</li>
+      {intolerancesArray.map((item, index: number) => <li className="intolerances-list"><input type="checkbox" className="larger" key={index} value={item}/>&nbsp;{item}</li>
       )}
       </ul>
       <Description style={{textAlign: 'center'}}>

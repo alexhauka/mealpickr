@@ -38,7 +38,13 @@ export default createGlobalStyle`
     list-style-type: none;
   }
 
-  li {
+  .intolerances-list {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15%;
+  }
+
+  .diets-list {
     display: flex;
     align-items: flex-end;
     margin-bottom: 15%;
