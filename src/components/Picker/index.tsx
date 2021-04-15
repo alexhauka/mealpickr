@@ -73,22 +73,24 @@ const Picker: React.FC = () => {
         <IconContext.Provider value={{
           style: {fontSize: '4em', color: "white"}
         }}>
-          <Menu>
-            <ButtonGroup>
-              <IoMdHeartDislike
-                className="top-icon-button"
-                onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
-              />
-              <IoIosLeaf
-                className="top-icon-button"
-                onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}
-              />
-              <IoMdPizza
-                className="top-icon-button"
-                onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
-              />
-            </ButtonGroup>
-          </Menu>
+          {view !== "Meals" &&
+            <Menu>
+              <ButtonGroup>
+                <IoMdHeartDislike
+                  className="top-icon-button"
+                  onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
+                />
+                <IoIosLeaf
+                  className="top-icon-button"
+                  onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}
+                />
+                <IoMdPizza
+                  className="top-icon-button"
+                  onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
+                />
+              </ButtonGroup>
+            </Menu>
+          }
           <ButtonGroup>
             {view === "Meals" &&
             <>

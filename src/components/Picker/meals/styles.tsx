@@ -22,3 +22,19 @@ export const Description = styled.div`
   margin: 5%;
   text-align: center;
 `;
+
+export const MealButtonGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const MealButton = styled.button`
+  width: 40%;
+  margin: 5%;
+  padding: 1%;
+  background-color: white;
+  color: black;
+  border: 0px solid white;
+  border-radius: 25px;
+`;

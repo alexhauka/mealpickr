@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Image, Description } from './styles';
+import { Container, Image, Description, MealButtonGroup, MealButton } from './styles';
 
 
 
@@ -25,6 +25,14 @@ const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
       <Description>
         {meal.title}
       </Description>
+      <MealButtonGroup>
+        <MealButton>
+          Recipe
+        </MealButton>
+        <MealButton>
+          Ingredients
+        </MealButton>
+      </MealButtonGroup>
     </Container>
   )
 
