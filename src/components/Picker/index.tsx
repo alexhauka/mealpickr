@@ -4,6 +4,7 @@ import Welcome from './welcome';
 import Intolerances from './intolerances';
 import Diets from './diets';
 import Cuisine from './cuisine';
+import Loading from './loading';
 import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike } from 'react-icons/io'
 import { IconContext } from "react-icons"
 
@@ -15,22 +16,23 @@ const Picker: React.FC = () => {
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
 
   function getMeals() {
-
+    setView("Loading");
     fetch(
-      `${fetchURL}?apiKey=${apiKey}`
+      `${fetchURL}?apiKey=${apiKey}&number=20`
     )
     .then(response => response.json())
     .then(data => {
       //testing
       console.log("data: ", data)
-      setMeals(data.results)
+      setMeals(data.results);
+      setView("Meals");
       console.log("meals: ", meals)
     })
     .catch(() => {
       console.error("error getting meals")
     })
 
-  }
+  };
 
   return (
     <>
@@ -50,6 +52,10 @@ const Picker: React.FC = () => {
         {view === "Cuisine" && 
         <>
           <Cuisine />
+        </>}
+        {view === "Loading" && 
+        <>
+          <Loading />
         </>}
         <IconContext.Provider value={{
           style: {fontSize: '4em', color: "white"}
