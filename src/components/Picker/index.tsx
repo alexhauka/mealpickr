@@ -5,12 +5,15 @@ import Intolerances from './intolerances';
 import Diets from './diets';
 import Cuisine from './cuisine';
 import Loading from './loading';
+import Meals from './meals';
 import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike } from 'react-icons/io'
 import { IconContext } from "react-icons"
 
 const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
-  const [meals, setMeals] = useState(null)
+  const [meals, setMeals] = useState([])
+  
+  const max = meals.length;
 
   const fetchURL = 'https://api.spoonacular.com/recipes/complexSearch';
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
@@ -34,6 +37,14 @@ const Picker: React.FC = () => {
 
   };
 
+  function randomMealID() {
+    return Math.floor(Math.random() * max)
+  }
+
+
+
+
+
   return (
     <>
       <Container>
@@ -56,6 +67,10 @@ const Picker: React.FC = () => {
         {view === "Loading" && 
         <>
           <Loading />
+        </>}
+        {view === "Meals" && 
+        <>
+          <Meals />
         </>}
         <IconContext.Provider value={{
           style: {fontSize: '4em', color: "white"}
