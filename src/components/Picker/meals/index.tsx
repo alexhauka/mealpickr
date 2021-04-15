@@ -5,6 +5,7 @@ import { Container, Image, Description, MealButtonGroup, MealButton } from './st
 
 
 type MealType = {
+  id: number,
   image: string,
   title: string
 }
@@ -14,8 +15,11 @@ interface MealProps {
 }
 
 
-const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
 
+const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
+  
+  // development testing: formatting returned jpg size
+  const formattedImageURL = `https://spoonacular.com/recipeImages/${meal.id}-312x150.jpg`;
 
 
   return (

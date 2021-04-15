@@ -64,9 +64,16 @@ export default createGlobalStyle`
   .top-icon-button {
     border: 1px solid white;
     padding: 0.5%;
-    cursor: pointer;
     float: left;
     width: 33.3%;
+  }
+
+  .top-icon-button-selected {
+    border: 1px solid white;
+    padding: 0.5%;
+    float: left;
+    width: 33.3%;
+    background-color: #ffffff5c;
   }
 
   .top-icon-button:after {

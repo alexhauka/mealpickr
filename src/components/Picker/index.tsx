@@ -71,21 +71,21 @@ const Picker: React.FC = () => {
           <Meals meal={meals[mealNumber]}/>
         </>}
         <IconContext.Provider value={{
-          style: {fontSize: '4em', color: "white"}
+          style: {fontSize: '4em', color: "white", cursor: "pointer"}
         }}>
           {view !== "Meals" &&
             <Menu>
               <ButtonGroup>
                 <IoMdHeartDislike
-                  className="top-icon-button"
+                  className={view === "Intolerances" ? "top-icon-button-selected" : "top-icon-button"}
                   onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
                 />
                 <IoIosLeaf
-                  className="top-icon-button"
+                  className={view === "Diets" ? "top-icon-button-selected" : "top-icon-button"}
                   onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}
                 />
                 <IoMdPizza
-                  className="top-icon-button"
+                  className={view === "Cuisine" ? "top-icon-button-selected" : "top-icon-button"}
                   onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
                 />
               </ButtonGroup>

@@ -37,4 +37,5 @@ export const MealButton = styled.button`
   color: black;
   border: 0px solid white;
   border-radius: 25px;
+  cursor: pointer;
 `;
