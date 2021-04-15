@@ -30,7 +30,7 @@ export default createGlobalStyle`
 
   .columns {
   column-count: 2;
-  column-gap: 2em;
+  column-gap: 0.5em;
   }
 
   ul {
