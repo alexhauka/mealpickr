@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   width: 90%;
@@ -11,7 +12,13 @@ export const Container = styled.div`
   border-radius: 25px;
 `;
 
+export const Image = styled.img`
+  border-radius: 25px;
+
+`;
+
 export const Description = styled.div`
   width: 90%;
-  margin-bottom: 5%;
+  margin: 5%;
+  text-align: center;
 `;

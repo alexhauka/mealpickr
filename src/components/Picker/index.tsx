@@ -6,12 +6,13 @@ import Diets from './diets';
 import Cuisine from './cuisine';
 import Loading from './loading';
 import Meals from './meals';
-import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike } from 'react-icons/io'
+import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike, IoIosCloseCircleOutline } from 'react-icons/io'
 import { IconContext } from "react-icons"
 
 const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
   const [meals, setMeals] = useState([])
+  const [mealNumber, setMealNumber] = useState(0)
   
   const max = meals.length;
 
@@ -38,11 +39,8 @@ const Picker: React.FC = () => {
   };
 
   function randomMealID() {
-    return Math.floor(Math.random() * max)
+    setMealNumber(Math.floor(Math.random() * max));
   }
-
-
-
 
 
   return (
@@ -70,7 +68,7 @@ const Picker: React.FC = () => {
         </>}
         {view === "Meals" && 
         <>
-          <Meals />
+          <Meals meal={meals[mealNumber]}/>
         </>}
         <IconContext.Provider value={{
           style: {fontSize: '4em', color: "white"}
@@ -92,10 +90,21 @@ const Picker: React.FC = () => {
             </ButtonGroup>
           </Menu>
           <ButtonGroup>
+            {view === "Meals" &&
+            <>
+            <IoIosCloseCircleOutline
+              onClick={(event: React.MouseEvent) => {setView("Welcome")}}
+            />
             <IoIosRefreshCircle
+              onClick={(event: React.MouseEvent) => {randomMealID()}}
+            />
+            </>
+            }
+            {view !== "Meals" &&
+            <IoIosCheckmarkCircle 
               onClick={(event: React.MouseEvent) => {getMeals()}}
             />
-            <IoIosCheckmarkCircle />
+            }
           </ButtonGroup>
         </IconContext.Provider>
       </Container>
