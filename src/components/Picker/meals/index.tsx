@@ -31,10 +31,7 @@ const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
       </Description>
       <MealButtonGroup>
         <MealButton>
-          Recipe
-        </MealButton>
-        <MealButton>
-          Ingredients
+          Go To Recipe
         </MealButton>
       </MealButtonGroup>
     </Container>

@@ -25,8 +25,8 @@ export const Description = styled.div`
 
 export const MealButtonGroup = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const MealButton = styled.button`

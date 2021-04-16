@@ -25,7 +25,7 @@ const Picker: React.FC = () => {
   function getMeals() {
     setView("Loading");
     fetch(
-      `${fetchURL2}?apiKey=${apiKey}&number=20&tags=lacto-vegetarian&tree-nut`
+      `${fetchURL2}?apiKey=${apiKey}&number=20&tags=`
     )
     .then(response => response.json())
     .then(data => {
