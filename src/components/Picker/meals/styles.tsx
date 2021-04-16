@@ -30,6 +30,9 @@ export const MealButtonGroup = styled.div`
 `;
 
 export const MealButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10em;
   height: 3em;
   margin: 5%;

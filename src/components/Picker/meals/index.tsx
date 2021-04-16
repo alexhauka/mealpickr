@@ -7,7 +7,8 @@ import { Container, Image, Description, MealButtonGroup, MealButton } from './st
 type MealType = {
   id: number,
   image: string,
-  title: string
+  title: string,
+  sourceUrl: string
 }
 
 interface MealProps {
@@ -30,7 +31,7 @@ const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
         {meal.title}
       </Description>
       <MealButtonGroup>
-        <MealButton>
+        <MealButton as="a" href ={`${meal.sourceUrl}`}>
           Go To Recipe
         </MealButton>
       </MealButtonGroup>
