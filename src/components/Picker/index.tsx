@@ -16,9 +16,6 @@ const Picker: React.FC = () => {
   
   const max = meals.length;
 
-  // complex search:
-  const fetchURL1 = 'https://api.spoonacular.com/recipes/complexSearch';
-  // random search:
   const fetchURL2 = `https://api.spoonacular.com/recipes/random`;
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
 
