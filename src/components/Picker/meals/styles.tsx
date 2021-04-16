@@ -30,7 +30,8 @@ export const MealButtonGroup = styled.div`
 `;
 
 export const MealButton = styled.button`
-  width: 40%;
+  width: 10em;
+  height: 3em;
   margin: 5%;
   padding: 1%;
   background-color: white;
