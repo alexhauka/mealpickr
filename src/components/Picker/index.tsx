@@ -16,19 +16,22 @@ const Picker: React.FC = () => {
   
   const max = meals.length;
 
-  const fetchURL = 'https://api.spoonacular.com/recipes/complexSearch';
+  // complex search:
+  const fetchURL1 = 'https://api.spoonacular.com/recipes/complexSearch';
+  // random search:
+  const fetchURL2 = `https://api.spoonacular.com/recipes/random`;
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
 
   function getMeals() {
     setView("Loading");
     fetch(
-      `${fetchURL}?apiKey=${apiKey}&number=20`
+      `${fetchURL2}?apiKey=${apiKey}&number=20&tags=lacto-vegetarian&tree-nut`
     )
     .then(response => response.json())
     .then(data => {
       //testing
       console.log("data: ", data)
-      setMeals(data.results);
+      setMeals(data.recipes);
       setView("Meals");
       console.log("meals: ", meals)
     })

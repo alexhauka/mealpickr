@@ -19,12 +19,12 @@ interface MealProps {
 const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
   
   // development testing: formatting returned jpg size
-  const formattedImageURL = `https://spoonacular.com/recipeImages/${meal.id}-312x150.jpg`;
+  const formattedImageURL = `https://spoonacular.com/recipeImages/${meal.id}-312x231.jpg`;
 
 
   return (
     <Container>
-      <Image src={`${meal.image}`} alt='meal'/>
+      <Image src={`${formattedImageURL}`} alt='meal'/>
       <br />
       <Description>
         {meal.title}
