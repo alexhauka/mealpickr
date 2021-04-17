@@ -97,4 +97,26 @@ export default createGlobalStyle`
   .top-icon-button:not(:last-child) {
     border-right: none;
   }
+
+  .top-icon-button-selected:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .top-icon-button-selected:hover {
+    background-color: #ffffff57;
+  }
+
+  .top-icon-button-selected:first-child {
+    border-radius: 10% 0 0 10%;
+  }
+
+  .top-icon-button-selected:last-child {
+    border-radius: 0 10% 10% 0;
+  }
+
+  .top-icon-button-selected:not(:last-child) {
+    border-right: none;
+  }
 `;
