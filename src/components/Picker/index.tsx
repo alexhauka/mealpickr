@@ -13,10 +13,39 @@ const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
   const [meals, setMeals] = useState([])
   const [mealNumber, setMealNumber] = useState(0)
+
+  const [intolerances, setIntolerances] = useState<intolerancesCheck>({
+    dairy:  { isChecked: false },
+    egg: { isChecked: false },
+    gluten: { isChecked: false },
+    grain: { isChecked: false },
+    peanut: { isChecked: false },
+    seafood: { isChecked: false },
+    sesame: { isChecked: false },
+    shellfish: { isChecked: false },
+    soy: { isChecked: false },
+    sulfite: { isChecked: false },
+    "tree-nut": { isChecked: false },
+    wheat: { isChecked: false }
+  })
   
+
+  interface intolerancesCheck {
+    [name: string]: {
+      [key: string]: boolean
+    }
+  }
+
+
+
+  // function liftIntolerances() {
+
+  // }
+
   const max = meals.length;
 
   const fetchURL2 = `https://api.spoonacular.com/recipes/random`;
+
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
 
   function getMeals() {
@@ -52,7 +81,10 @@ const Picker: React.FC = () => {
         </>}
         {view === "Intolerances" && 
         <>
-          <Intolerances />
+          <Intolerances
+            intolerances={intolerances}
+            liftIntolerances={setIntolerances}
+          />
         </>}
         {view === "Diets" && 
         <>

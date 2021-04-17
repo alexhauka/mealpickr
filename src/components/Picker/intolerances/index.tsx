@@ -5,20 +5,6 @@ const intolerancesArray: string[] = ["dairy", "egg", "gluten", "grain", "peanut"
 
 let checkedIntolerances: string[] = [];
 
-// const intolerancesObject: {[index: string]:any} = {
-//   dairy:  { isChecked: false },
-//   egg: { isChecked: false },
-//   gluten: { isChecked: false },
-//   grain: { isChecked: false },
-//   peanut: { isChecked: false },
-//   seafood: { isChecked: false },
-//   sesame: { isChecked: false },
-//   shellfish: { isChecked: false },
-//   soy: { isChecked: false },
-//   sulfite: { isChecked: false },
-//   "tree-nut": { isChecked: false },
-//   wheat: { isChecked: false }
-// }
 
 interface itemCheck {
   [name: string]: {
@@ -26,25 +12,16 @@ interface itemCheck {
   }
 }
 
+interface props {
+  intolerances: {},
+  liftIntolerances: any;
+}
 
-const Intolerances: React.FC = () => {
 
-  const [intolerances, setIntolerances] = useState(checkedIntolerances)
+const Intolerances: React.FC<props> = ({intolerances, liftIntolerances}) => {
 
-  const [itemChecks, setItemChecks] = useState<itemCheck>({
-    dairy:  { isChecked: false },
-    egg: { isChecked: false },
-    gluten: { isChecked: false },
-    grain: { isChecked: false },
-    peanut: { isChecked: false },
-    seafood: { isChecked: false },
-    sesame: { isChecked: false },
-    shellfish: { isChecked: false },
-    soy: { isChecked: false },
-    sulfite: { isChecked: false },
-    "tree-nut": { isChecked: false },
-    wheat: { isChecked: false }
-  })
+
+  const [itemChecks, setItemChecks] = useState<itemCheck>({...intolerances})
 
   function handleCheckIntolerances(event: React.ChangeEvent<HTMLInputElement>) {
 
@@ -62,13 +39,12 @@ const Intolerances: React.FC = () => {
         [event.target.name]: { isChecked: false }
       })
     }
-    setIntolerances(checkedIntolerances);
-    console.log(intolerances)
+    
   }
   
-    // useEffect(() => {
-      
-    // }, [intolerances, itemChecks])
+  useEffect(() => {
+    liftIntolerances(itemChecks);
+  })
 
   return (
     <Container>
@@ -83,7 +59,6 @@ const Intolerances: React.FC = () => {
       checked={itemChecks[item].isChecked}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         handleCheckIntolerances(e);
-        // console.log(intolerances);
       }}
       className="larger"
       value={item}/>
