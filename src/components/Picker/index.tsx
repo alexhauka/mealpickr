@@ -96,7 +96,10 @@ const Picker: React.FC = () => {
         </>}
         {view === "Diets" && 
         <>
-          <Diets />
+          <Diets
+            diets={diets}
+            liftDiets={setDiets}
+          />
         </>}
         {view === "Cuisine" && 
         <>

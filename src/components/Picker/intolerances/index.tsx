@@ -50,17 +50,16 @@ const Intolerances: React.FC<props> = ({intolerances, liftIntolerances}) => {
     <Container>
       <ul className="columns">
       {intolerancesArray.map((item: string, index: number) => <li
-      
       key={index}
       className="intolerances-list">
       <input
+      className="larger"
       name={item}
       type="checkbox"
       checked={itemChecks[item].isChecked}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         handleCheckIntolerances(e);
       }}
-      className="larger"
       value={item}/>
         &nbsp;{item}
       </li>
