@@ -5,7 +5,6 @@ const intolerancesArray: string[] = ["dairy", "egg", "gluten", "grain", "peanut"
 
 let checkedIntolerances: string[] = [];
 
-
 interface itemCheck {
   [name: string]: {
     [key: string]: boolean

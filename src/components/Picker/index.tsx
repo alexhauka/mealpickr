@@ -41,6 +41,21 @@ const Picker: React.FC = () => {
     "primal": { isChecked: false },
     "whole30": { isChecked: false }
   })
+
+  const [cuisines, setCuisines] = useState<itemCheck>({
+    "african":  { isChecked: false },
+    "caribbean": { isChecked: false },
+    "chinese": { isChecked: false },
+    "french": { isChecked: false },
+    "indian": { isChecked: false },
+    "italian": { isChecked: false },
+    "japanese": { isChecked: false },
+    "mediterranean": { isChecked: false },
+    "Mexican": { isChecked: false },
+    "middle-eastern": { isChecked: false },
+    "thai": { isChecked: false },
+    "vietnamese": { isChecked: false }
+  })
   
 
   interface itemCheck {
@@ -103,7 +118,10 @@ const Picker: React.FC = () => {
         </>}
         {view === "Cuisine" && 
         <>
-          <Cuisine />
+          <Cuisine
+            cuisines={cuisines}
+            liftCuisines={setCuisines}
+          />
         </>}
         {view === "Loading" && 
         <>
