@@ -14,33 +14,41 @@ const Picker: React.FC = () => {
   const [meals, setMeals] = useState([])
   const [mealNumber, setMealNumber] = useState(0)
 
-  const [intolerances, setIntolerances] = useState<intolerancesCheck>({
-    dairy:  { isChecked: false },
-    egg: { isChecked: false },
-    gluten: { isChecked: false },
-    grain: { isChecked: false },
-    peanut: { isChecked: false },
-    seafood: { isChecked: false },
-    sesame: { isChecked: false },
-    shellfish: { isChecked: false },
-    soy: { isChecked: false },
-    sulfite: { isChecked: false },
+  const [intolerances, setIntolerances] = useState<itemCheck>({
+    "dairy":  { isChecked: false },
+    "egg": { isChecked: false },
+    "gluten": { isChecked: false },
+    "grain": { isChecked: false },
+    "peanut": { isChecked: false },
+    "seafood": { isChecked: false },
+    "sesame": { isChecked: false },
+    "shellfish": { isChecked: false },
+    "soy": { isChecked: false },
+    "sulfite": { isChecked: false },
     "tree-nut": { isChecked: false },
-    wheat: { isChecked: false }
+    "wheat": { isChecked: false }
+  })
+
+  const [diets, setDiets] = useState<itemCheck>({
+    "gluten-free":  { isChecked: false },
+    "ketogenic": { isChecked: false },
+    "vegetarian": { isChecked: false },
+    "lacto-vegetarian": { isChecked: false },
+    "ovo-vegetarian": { isChecked: false },
+    "vegan": { isChecked: false },
+    "pescetarian": { isChecked: false },
+    "paleo": { isChecked: false },
+    "primal": { isChecked: false },
+    "whole30": { isChecked: false }
   })
   
 
-  interface intolerancesCheck {
+  interface itemCheck {
     [name: string]: {
       [key: string]: boolean
     }
   }
 
-
-
-  // function liftIntolerances() {
-
-  // }
 
   const max = meals.length;
 
