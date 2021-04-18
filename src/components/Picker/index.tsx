@@ -67,7 +67,7 @@ const Picker: React.FC = () => {
 
   const max = meals.length;
 
-  const fetchURL2 = `https://api.spoonacular.com/recipes/random`;
+  const fetchURL2 = `https://api.spoonacular.com/recipes/complexSearch`;
 
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
 
@@ -76,15 +76,15 @@ const Picker: React.FC = () => {
     const userIntolerances = addParameters(intolerances);
     const userDiets = addParameters(diets);
     const userCuisines = addParameters(cuisines);
-    console.log("fetching url: ", `${fetchURL2}?apiKey=${apiKey}&number=20&tags=${userDiets}${userCuisines}&intolerances=${userIntolerances}`)
+    console.log("fetching url: ", `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisines=${userCuisines}`)
     fetch(
-      `${fetchURL2}?apiKey=${apiKey}&number=20&tags=${userDiets}${userCuisines}&intolerances=${userIntolerances}`
+      `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisines=${userCuisines}`
     )
     .then(response => response.json())
     .then(data => {
       //testing
       console.log("data: ", data)
-      setMeals(data.recipes);
+      setMeals(data.results);
       setView("Meals");
       console.log("meals: ", meals)
     })
@@ -102,7 +102,7 @@ const Picker: React.FC = () => {
     let addedFilters = '';
     for (const item in filters) {
       if (filters[item].isChecked) {
-        addedFilters += `${item}%2C`
+        addedFilters += `${item},`
       }
     }
     return addedFilters;
