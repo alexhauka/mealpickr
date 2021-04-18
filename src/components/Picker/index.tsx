@@ -6,6 +6,7 @@ import Diets from './diets';
 import Cuisine from './cuisine';
 import Loading from './loading';
 import Meals from './meals';
+import Error from './error';
 import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike, IoIosCloseCircleOutline } from 'react-icons/io'
 import { IconContext } from "react-icons"
 
@@ -82,10 +83,12 @@ const Picker: React.FC = () => {
     )
     .then(response => response.json())
     .then(data => {
-      //testing
-      console.log("data: ", data)
-      setMeals(data.results);
-      setView("Meals");
+      if (data.results.length > 0) {
+        setMeals(data.results);
+        setView("Meals");
+      } else {
+        setView("Error");
+      }
     })
     .catch(() => {
       console.error("error getting meals")
@@ -144,6 +147,11 @@ const Picker: React.FC = () => {
         <>
           <Meals meal={meals[mealNumber]}/>
         </>}
+        {view === "Error" &&
+        <>
+          <Error />
+        </>
+        }
         <IconContext.Provider value={{
           style: {fontSize: '4em', color: "white", cursor: "pointer"}
         }}>
@@ -176,7 +184,14 @@ const Picker: React.FC = () => {
             />
             </>
             }
-            {view !== "Meals" &&
+            {view === "Error" &&
+            <>
+              <IoIosCloseCircleOutline
+              onClick={(event: React.MouseEvent) => {setView("Welcome")}}
+            />
+            </>
+            }
+            {view !== ("Meals" || "Error") &&
             <IoIosCheckmarkCircle 
               onClick={(event: React.MouseEvent) => {getMeals()}}
             />
