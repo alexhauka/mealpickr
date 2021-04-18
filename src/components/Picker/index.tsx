@@ -79,11 +79,12 @@ const Picker: React.FC = () => {
     const userCuisines = addParameters(cuisines);
     console.log("fetching url: ", `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisines=${userCuisines}`)
     fetch(
-      `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisines=${userCuisines}&addRecipeInformation=true`
+      `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisine=${userCuisines}&addRecipeInformation=true`
     )
     .then(response => response.json())
     .then(data => {
       if (data.results.length > 0) {
+        console.log(data.results)
         setMeals(data.results);
         setMealNumber(Math.floor(Math.random() * max));
         setView("Meals");
@@ -98,7 +99,10 @@ const Picker: React.FC = () => {
   };
 
   function randomMealID() {
-    setMealNumber(Math.floor(Math.random() * max));
+    const currentNumber = mealNumber;
+    const nextNumber = Math.floor(Math.random() * max);
+    nextNumber === currentNumber ? setMealNumber(Math.floor(Math.random() * max)) : setMealNumber(nextNumber);
+    
   }
 
   function addParameters(filters: itemCheck) {

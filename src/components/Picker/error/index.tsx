@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Description } from './styles';
 
 const Error: React.FC = () => {
