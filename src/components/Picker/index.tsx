@@ -7,8 +7,8 @@ import Cuisine from './cuisine';
 import Loading from './loading';
 import Meals from './meals';
 import Error from './error';
-import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike, IoIosCloseCircleOutline } from 'react-icons/io'
-import { IconContext } from "react-icons"
+import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike, IoIosCloseCircleOutline } from 'react-icons/io';
+import { IconContext } from "react-icons";
 
 const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
@@ -85,6 +85,7 @@ const Picker: React.FC = () => {
     .then(data => {
       if (data.results.length > 0) {
         setMeals(data.results);
+        setMealNumber(Math.floor(Math.random() * max));
         setView("Meals");
       } else {
         setView("Error");
