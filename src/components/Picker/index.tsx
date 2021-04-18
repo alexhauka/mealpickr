@@ -78,7 +78,7 @@ const Picker: React.FC = () => {
     const userCuisines = addParameters(cuisines);
     console.log("fetching url: ", `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisines=${userCuisines}`)
     fetch(
-      `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisines=${userCuisines}`
+      `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisines=${userCuisines}&addRecipeInformation=true`
     )
     .then(response => response.json())
     .then(data => {
@@ -86,7 +86,6 @@ const Picker: React.FC = () => {
       console.log("data: ", data)
       setMeals(data.results);
       setView("Meals");
-      console.log("meals: ", meals)
     })
     .catch(() => {
       console.error("error getting meals")
