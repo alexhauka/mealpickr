@@ -51,7 +51,7 @@ const Picker: React.FC = () => {
     "italian": { isChecked: false },
     "japanese": { isChecked: false },
     "mediterranean": { isChecked: false },
-    "Mexican": { isChecked: false },
+    "mexican": { isChecked: false },
     "middle-eastern": { isChecked: false },
     "thai": { isChecked: false },
     "vietnamese": { isChecked: false }
@@ -73,8 +73,12 @@ const Picker: React.FC = () => {
 
   function getMeals() {
     setView("Loading");
+    const userIntolerances = addParameters(intolerances);
+    const userDiets = addParameters(diets);
+    const userCuisines = addParameters(cuisines);
+    console.log("fetching url: ", `${fetchURL2}?apiKey=${apiKey}&number=20&tags=${userDiets}${userCuisines}&intolerances=${userIntolerances}`)
     fetch(
-      `${fetchURL2}?apiKey=${apiKey}&number=20&tags=`
+      `${fetchURL2}?apiKey=${apiKey}&number=20&tags=${userDiets}${userCuisines}&intolerances=${userIntolerances}`
     )
     .then(response => response.json())
     .then(data => {
@@ -92,6 +96,16 @@ const Picker: React.FC = () => {
 
   function randomMealID() {
     setMealNumber(Math.floor(Math.random() * max));
+  }
+
+  function addParameters(filters: itemCheck) {
+    let addedFilters = '';
+    for (const item in filters) {
+      if (filters[item].isChecked) {
+        addedFilters += `${item}%2C`
+      }
+    }
+    return addedFilters;
   }
 
 

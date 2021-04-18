@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Description } from './styles';
 
-const cuisineArray: string[] = ["african", "caribbean", "chinese", "french", "indian", "italian", "japanese", "mediterranean", "Mexican", "middle-eastern", "thai", "vietnamese"];
+const cuisineArray: string[] = ["african", "caribbean", "chinese", "french", "indian", "italian", "japanese", "mediterranean", "mexican", "middle-eastern", "thai", "vietnamese"];
 
 let checkedCuisines: string[] = [];
 
