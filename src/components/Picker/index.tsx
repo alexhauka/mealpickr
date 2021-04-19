@@ -68,6 +68,8 @@ const Picker: React.FC = () => {
 
   const max = meals.length;
 
+  const fetchURL1 = `https://api.spoonacular.com/recipes/random`
+
   const fetchURL2 = `https://api.spoonacular.com/recipes/complexSearch`;
 
   const apiKey = process.env.REACT_APP_SPOONACULAR_API;
@@ -77,23 +79,46 @@ const Picker: React.FC = () => {
     const userIntolerances = addParameters(intolerances);
     const userDiets = addParameters(diets);
     const userCuisines = addParameters(cuisines);
-    fetch(
-      `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisine=${userCuisines}&addRecipeInformation=true`
-    )
-    .then(response => response.json())
-    .then(data => {
-      if (data.results.length > 0) {
-        setMeals(data.results);
-        setMealNumber(Math.floor(Math.random() * max));
-        setView("Meals");
-      } else {
+    if (userIntolerances.length + userDiets.length + userCuisines.length === 0) {
+
+      fetch(
+        `${fetchURL1}?apiKey=${apiKey}&number=20`
+      )
+      .then(response => response.json())
+      .then(data => {
+        if (data.recipes.length > 0) {
+          setMeals(data.recipes);
+          setMealNumber(Math.floor(Math.random() * max));
+          setView("Meals");
+        } else {
+          setView("Error");
+        }
+      })
+      .catch(() => {
         setView("Error");
-      }
-    })
-    .catch(() => {
-      setView("Error");
-      console.error("error getting meals")
-    })
+        console.error("error getting meals")
+      })
+
+    } else {
+
+      fetch(
+        `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisine=${userCuisines}&addRecipeInformation=true`
+      )
+      .then(response => response.json())
+      .then(data => {
+        if (data.results.length > 0) {
+          setMeals(data.results);
+          setMealNumber(Math.floor(Math.random() * max));
+          setView("Meals");
+        } else {
+          setView("Error");
+        }
+      })
+      .catch(() => {
+        setView("Error");
+        console.error("error getting meals")
+      })
+    }
 
   };
 
