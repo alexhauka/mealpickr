@@ -65,7 +65,7 @@ const Picker: React.FC = () => {
     }
   }
 
-
+  // used for viewing a random meal in the results
   const max = meals.length;
 
   const fetchURL1 = `https://api.spoonacular.com/recipes/random`
@@ -79,8 +79,9 @@ const Picker: React.FC = () => {
     const userIntolerances = addParameters(intolerances);
     const userDiets = addParameters(diets);
     const userCuisines = addParameters(cuisines);
-    if (userIntolerances.length + userDiets.length + userCuisines.length === 0) {
 
+    // if all checkboxes are empty, uses the spoonacular random recipe API endpoint:
+    if (userIntolerances.length + userDiets.length + userCuisines.length === 0) {
       fetch(
         `${fetchURL1}?apiKey=${apiKey}&number=20`
       )
@@ -99,6 +100,7 @@ const Picker: React.FC = () => {
         console.error("error getting meals")
       })
 
+    // otherwise, uses complex search  
     } else {
 
       fetch(
@@ -121,7 +123,8 @@ const Picker: React.FC = () => {
     }
 
   };
-
+  
+  // returns a random meal id for the "meals" view
   function randomMealID() {
     const currentNumber = mealNumber;
     const nextNumber = Math.floor(Math.random() * max);
@@ -129,6 +132,7 @@ const Picker: React.FC = () => {
     
   }
 
+  // adds user parameters to the query (fetchURL2)
   function addParameters(filters: itemCheck) {
     let addedFilters = '';
     for (const item in filters) {
