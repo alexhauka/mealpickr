@@ -13,6 +13,8 @@ export default createGlobalStyle`
  
   #root {
     margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
   }
  
   html {

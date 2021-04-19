@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Menu, ButtonGroup } from './styles';
+import { ParentContainer } from '../reusables';
+import { Menu, ButtonGroup } from './styles';
 import Welcome from './welcome';
 import Intolerances from './intolerances';
 import Diets from './diets';
@@ -147,7 +148,7 @@ const Picker: React.FC = () => {
 
   return (
     <>
-      <Container>
+      <ParentContainer>
         {view === "Welcome" && 
         <>
           <Welcome />
@@ -214,7 +215,7 @@ const Picker: React.FC = () => {
             }
           </IconContext.Provider>
           <IconContext.Provider value={{
-          style: {fontSize: '4em', color: "white", cursor: "pointer", marginTop: "30%"}
+          style: {fontSize: '4em', color: "white", cursor: "pointer"}
         }}>
           <ButtonGroup>
             {view === "Meals" &&
@@ -237,7 +238,7 @@ const Picker: React.FC = () => {
             
           </ButtonGroup>
         </IconContext.Provider>
-      </Container>
+      </ParentContainer>
     </>
   );
 }

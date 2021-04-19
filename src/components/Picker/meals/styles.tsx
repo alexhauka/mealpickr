@@ -1,29 +1,14 @@
 import styled from 'styled-components';
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 90%;
-  height: 50%;
-  margin: 5%;
-  border: 0px solid white;
-  border-radius: 25px;
-`;
+import { ParagraphDescription } from '../../reusables';
 
 export const Image = styled.img`
   border-radius: 25px;
   margin-top: 10%;
-
 `;
 
-export const Description = styled.div`
-  width: 90%;
-  min-height: 15%;
-  max-height: 15%;
-  margin: 5%;
-  text-align: center;
+export const MealDescription = styled(ParagraphDescription)`
+  min-height: 5em;
+  max-height: 5em;
 `;
 
 export const MealButtonGroup = styled.div`
@@ -32,7 +17,7 @@ export const MealButtonGroup = styled.div`
   align-items: center;
 `;
 
-export const MealButton = styled.button`
+export const RecipeButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;

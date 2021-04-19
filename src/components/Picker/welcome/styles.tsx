@@ -12,5 +12,5 @@ export const Container = styled.div`
 
 export const Description = styled.div`
   width: 90%;
-  margin-bottom: 5%;
+  margin: 5%;
 `;

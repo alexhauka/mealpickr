@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Image, Description, MealButtonGroup, MealButton } from './styles';
+import { Image, MealDescription, MealButtonGroup, RecipeButton } from './styles';
 
 
 
@@ -19,23 +19,22 @@ interface MealProps {
 
 const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
   
-  // development testing: formatting returned jpg size
   const formattedImageURL = `https://spoonacular.com/recipeImages/${meal.id}-312x231.jpg`;
 
 
   return (
-    <Container>
+    <>
       <Image src={`${formattedImageURL}`} alt='meal'/>
       <br />
-      <Description>
+      <MealDescription>
         {meal.title}
-      </Description>
+      </MealDescription>
       <MealButtonGroup>
-        <MealButton as="a" href ={`${meal.sourceUrl}`}>
+        <RecipeButton as="a" href ={`${meal.sourceUrl}`}>
           Go To Recipe
-        </MealButton>
+        </RecipeButton>
       </MealButtonGroup>
-    </Container>
+    </>
   )
 
 }
