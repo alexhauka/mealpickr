@@ -45,6 +45,9 @@ const Diets: React.FC<props> = ({diets, liftDiets}) => {
 
   return (
     <Container>
+      <Description style={{textAlign: 'center'}}>
+        I'd only want to eat:
+      </Description>
       <ul className="columns">
       {dietArray.map((item: string, index: number) => <li
       key={index}
@@ -62,9 +65,7 @@ const Diets: React.FC<props> = ({diets, liftDiets}) => {
       </li>
       )}
       </ul>
-      <Description style={{textAlign: 'center'}}>
-        Select any dietary restrictions to apply to your results
-      </Description>
+      
     </Container>
 
   );

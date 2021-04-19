@@ -47,6 +47,9 @@ const Intolerances: React.FC<props> = ({intolerances, liftIntolerances}) => {
 
   return (
     <Container>
+      <Description style={{textAlign: 'center'}}>
+        I'm intolerant/allergic to:
+      </Description>
       <ul className="columns">
       {intolerancesArray.map((item: string, index: number) => <li
       key={index}
@@ -64,9 +67,7 @@ const Intolerances: React.FC<props> = ({intolerances, liftIntolerances}) => {
       </li>
       )}
       </ul>
-      <Description style={{textAlign: 'center'}}>
-        Select any intolerances to remove them from your results
-      </Description>
+
     </Container>
 
   );

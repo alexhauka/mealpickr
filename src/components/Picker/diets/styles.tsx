@@ -16,5 +16,5 @@ export const Description = styled.div`
   justify-content: center;
   text-align: center;
   width: 90%;
-  margin-top: 10%;
+  margin-bottom: 10%;
 `;

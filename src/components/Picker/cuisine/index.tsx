@@ -45,6 +45,9 @@ const Cuisine: React.FC<props> = ({cuisines, liftCuisines}) => {
 
   return (
     <Container>
+      <Description style={{textAlign: 'center'}}>
+        I'd prefer my food to be:
+      </Description>
       <ul className="columns">
       {cuisineArray.map((item: string, index: number) => <li
       key={index}
@@ -62,9 +65,7 @@ const Cuisine: React.FC<props> = ({cuisines, liftCuisines}) => {
       </li>
       )}
       </ul>
-      <Description style={{textAlign: 'center'}}>
-        Select any cuisines to apply to your results
-      </Description>
+      
     </Container>
 
   );
