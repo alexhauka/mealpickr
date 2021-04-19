@@ -213,10 +213,6 @@ const Picker: React.FC = () => {
               onClick={(event: React.MouseEvent) => {getMeals()}}
             />
             }
-          </IconContext.Provider>
-          <IconContext.Provider value={{
-          style: {fontSize: '4em', color: "white", cursor: "pointer"}
-        }}>
           <ButtonGroup>
             {view === "Meals" &&
             <>

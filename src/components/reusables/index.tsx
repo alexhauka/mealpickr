@@ -25,6 +25,7 @@ export const ChildContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 15em;
+  margin-top: 5%;
   border: 0px solid white;
   border-radius: 25px;
 `;
@@ -34,6 +35,5 @@ export const ChildDescription = styled.div`
   justify-content: center;
   text-align: center;
   width: 90%;
-  margin-bottom: 10%;
 `;
 
