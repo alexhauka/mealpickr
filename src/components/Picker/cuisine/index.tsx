@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Description } from './styles';
 
-const cuisineArray: string[] = ["african", "caribbean", "chinese", "french", "indian", "italian", "japanese", "mediterranean", "mexican", "middle-eastern", "thai", "vietnamese"];
+const cuisineArray: string[] = ["african", "caribbean", "chinese", "french", "indian", "italian", "japanese", "mediterranean", "mexican", "middle eastern", "thai", "vietnamese"];
 
 let checkedCuisines: string[] = [];
 
@@ -46,9 +46,9 @@ const Cuisine: React.FC<props> = ({cuisines, liftCuisines}) => {
   return (
     <Container>
       <Description style={{textAlign: 'center'}}>
-        I'd prefer my food to be:
+        I'd prefer the recipes to be:
       </Description>
-      <ul className="columns">
+      <ul className="columns-cuisines">
       {cuisineArray.map((item: string, index: number) => <li
       key={index}
       className="cuisine-list">

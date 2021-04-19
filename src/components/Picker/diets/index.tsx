@@ -46,9 +46,9 @@ const Diets: React.FC<props> = ({diets, liftDiets}) => {
   return (
     <Container>
       <Description style={{textAlign: 'center'}}>
-        I'd only want to eat:
+        I only want recipes that are:
       </Description>
-      <ul className="columns">
+      <ul className="columns-diets">
       {dietArray.map((item: string, index: number) => <li
       key={index}
       className="diets-list">

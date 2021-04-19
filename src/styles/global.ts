@@ -28,10 +28,33 @@ export default createGlobalStyle`
     color: white;
   }
 
-  .columns {
-  column-count: 2;
-  column-gap: 0.5em;
+  .columns-intolerances {
+    column-count: 2;
+    column-gap: 1em;
+    column-width: 7em;
+    margin-left: 1em;
   }
+
+  .columns-diets {
+    column-count: 2;
+    column-gap: 1em;
+    column-width: 7em;
+    margin-left: 1em;
+  }
+
+  .columns-cuisines {
+    column-count: 2;
+    column-gap: 1em;
+    column-width: 7em;
+    margin-left: 1em;
+  }
+
+  // .columns {
+  //   column-count: 2;
+  //   column-gap: 1em;
+  //   column-width: 7em;
+  //   margin-left: 2em;
+  //   }
 
   ul {
     margin-top: 0;
@@ -41,24 +64,27 @@ export default createGlobalStyle`
   .intolerances-list {
     display: flex;
     align-items: flex-end;
+    font-size: smaller;
     margin-bottom: 15%;
   }
 
   .diets-list {
     display: flex;
     align-items: flex-end;
+    font-size: smaller;
     margin-bottom: 15%;
   }
 
   .cuisine-list {
     display: flex;
     align-items: flex-end;
-    margin-bottom: 10%;
+    font-size: smaller;
+    margin-bottom: 15%;
   }
 
   .larger {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
   }
 
   .top-icon-button {

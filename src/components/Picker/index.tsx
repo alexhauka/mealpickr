@@ -26,7 +26,7 @@ const Picker: React.FC = () => {
     "shellfish": { isChecked: false },
     "soy": { isChecked: false },
     "sulfite": { isChecked: false },
-    "tree-nut": { isChecked: false },
+    "tree nut": { isChecked: false },
     "wheat": { isChecked: false }
   })
 
@@ -53,7 +53,7 @@ const Picker: React.FC = () => {
     "japanese": { isChecked: false },
     "mediterranean": { isChecked: false },
     "mexican": { isChecked: false },
-    "middle-eastern": { isChecked: false },
+    "middle eastern": { isChecked: false },
     "thai": { isChecked: false },
     "vietnamese": { isChecked: false }
   })
@@ -79,6 +79,7 @@ const Picker: React.FC = () => {
     const userIntolerances = addParameters(intolerances);
     const userDiets = addParameters(diets);
     const userCuisines = addParameters(cuisines);
+    
 
     // if all checkboxes are empty, uses the spoonacular random recipe API endpoint:
     if (userIntolerances.length + userDiets.length + userCuisines.length === 0) {
@@ -102,7 +103,7 @@ const Picker: React.FC = () => {
 
     // otherwise, uses complex search  
     } else {
-
+      console.log(`${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisine=${userCuisines}&addRecipeInformation=true`)
       fetch(
         `${fetchURL2}?apiKey=${apiKey}&number=20&intolerances=${userIntolerances}&diet=${userDiets}&cuisine=${userCuisines}&addRecipeInformation=true`
       )
@@ -206,6 +207,15 @@ const Picker: React.FC = () => {
               </ButtonGroup>
             </Menu>
           }
+          {view !== ("Meals" || "Error") &&
+            <IoIosCheckmarkCircle 
+              onClick={(event: React.MouseEvent) => {getMeals()}}
+            />
+            }
+          </IconContext.Provider>
+          <IconContext.Provider value={{
+          style: {fontSize: '4em', color: "white", cursor: "pointer", marginTop: "30%"}
+        }}>
           <ButtonGroup>
             {view === "Meals" &&
             <>
@@ -224,11 +234,7 @@ const Picker: React.FC = () => {
             />
             </>
             }
-            {view !== ("Meals" || "Error") &&
-            <IoIosCheckmarkCircle 
-              onClick={(event: React.MouseEvent) => {getMeals()}}
-            />
-            }
+            
           </ButtonGroup>
         </IconContext.Provider>
       </Container>

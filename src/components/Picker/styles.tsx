@@ -34,12 +34,12 @@ export const Menu = styled.div`
   justify-content: space-evenly;
   min-width: 90%;
   margin: 5%;
+  margin-bottom: 15%;
 `;
 
 export const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 95%;
-  padding-bottom: 10%;
 `;
 

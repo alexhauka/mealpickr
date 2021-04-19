@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Description } from './styles';
 
-const intolerancesArray: string[] = ["dairy", "egg", "gluten", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
+const intolerancesArray: string[] = ["dairy", "egg", "gluten", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree nut", "wheat"];
 
 let checkedIntolerances: string[] = [];
 
@@ -50,7 +50,7 @@ const Intolerances: React.FC<props> = ({intolerances, liftIntolerances}) => {
       <Description style={{textAlign: 'center'}}>
         I'm intolerant/allergic to:
       </Description>
-      <ul className="columns">
+      <ul className="columns-intolerances">
       {intolerancesArray.map((item: string, index: number) => <li
       key={index}
       className="intolerances-list">
