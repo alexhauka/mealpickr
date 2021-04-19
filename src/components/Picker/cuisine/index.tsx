@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Description } from './styles';
+import { ChildContainer, ChildDescription } from '../../reusables';
 
 const cuisineArray: string[] = ["african", "caribbean", "chinese", "french", "indian", "italian", "japanese", "mediterranean", "mexican", "middle eastern", "thai", "vietnamese"];
 
@@ -44,10 +44,10 @@ const Cuisine: React.FC<props> = ({cuisines, liftCuisines}) => {
   })
 
   return (
-    <Container>
-      <Description style={{textAlign: 'center'}}>
+    <ChildContainer>
+      <ChildDescription style={{textAlign: 'center'}}>
         I'd prefer the recipes to be:
-      </Description>
+      </ChildDescription>
       <ul className="columns-cuisines">
       {cuisineArray.map((item: string, index: number) => <li
       key={index}
@@ -66,7 +66,7 @@ const Cuisine: React.FC<props> = ({cuisines, liftCuisines}) => {
       )}
       </ul>
       
-    </Container>
+    </ChildContainer>
 
   );
 

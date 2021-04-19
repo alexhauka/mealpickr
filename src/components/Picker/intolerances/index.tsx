@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Description } from './styles';
+import { ChildContainer, ChildDescription } from '../../reusables';
 
 const intolerancesArray: string[] = ["dairy", "egg", "gluten", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree nut", "wheat"];
 
@@ -46,10 +46,10 @@ const Intolerances: React.FC<props> = ({intolerances, liftIntolerances}) => {
   })
 
   return (
-    <Container>
-      <Description style={{textAlign: 'center'}}>
+    <ChildContainer>
+      <ChildDescription style={{textAlign: 'center'}}>
         I'm intolerant/allergic to:
-      </Description>
+      </ChildDescription>
       <ul className="columns-intolerances">
       {intolerancesArray.map((item: string, index: number) => <li
       key={index}
@@ -68,7 +68,7 @@ const Intolerances: React.FC<props> = ({intolerances, liftIntolerances}) => {
       )}
       </ul>
 
-    </Container>
+    </ChildContainer>
 
   );
 

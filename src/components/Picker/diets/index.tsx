@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Description } from './styles';
+import { ChildContainer, ChildDescription } from '../../reusables';
 
 const dietArray = ["gluten-free", "ketogenic", "vegetarian", "lacto-vegetarian", "ovo-vegetarian", "vegan", "pescetarian", "paleo", "primal", "whole30"];
 
@@ -44,10 +44,10 @@ const Diets: React.FC<props> = ({diets, liftDiets}) => {
   })
 
   return (
-    <Container>
-      <Description style={{textAlign: 'center'}}>
+    <ChildContainer>
+      <ChildDescription style={{textAlign: 'center'}}>
         I only want recipes that are:
-      </Description>
+      </ChildDescription>
       <ul className="columns-diets">
       {dietArray.map((item: string, index: number) => <li
       key={index}
@@ -66,7 +66,7 @@ const Diets: React.FC<props> = ({diets, liftDiets}) => {
       )}
       </ul>
       
-    </Container>
+    </ChildContainer>
 
   );
 
