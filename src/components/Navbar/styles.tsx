@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 10%;
+  margin-top: 1%;
   color: #F1F1F1;
 `;
 export const Logo = styled.div`

@@ -13,4 +13,10 @@ export const WelcomeDescription = styled(ParagraphDescription)`
   ${media.greaterThan('medium')`
     font-size: 2em;   
   `};
+
+  ${media.greaterThan('large')`
+    min-width: 100%;
+    margin-top: 0;
+    font-size: 2.2em; 
+  `};
 `;

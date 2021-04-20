@@ -4,9 +4,14 @@ import { media } from '../../styles/media';
 export const Container = styled.div`
   position: absolute;
   bottom: 0;
+  margin-bottom: 1%;
   height: 10%;
   width: 100%;
   color: #F1F1F1;
+
+  ${media.greaterThan('medium')`
+    margin-bottom: 2%;
+  `};
 `;
  
 export const FooterNav = styled.div`

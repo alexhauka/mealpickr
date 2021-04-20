@@ -7,7 +7,12 @@ export const ContactInfo = styled.div`
   justify-content: space-between;
   min-width: -webkit-fill-available;
   padding: 20%;
-  border
+  
+  ${media.greaterThan('large')`
+    min-width: 50%;
+    min-height: 40%;
+    padding: 5%;
+  `};
 `;
 
 export const ContactButton = styled.a`

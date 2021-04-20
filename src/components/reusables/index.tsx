@@ -18,6 +18,12 @@ export const ParentContainer = styled.div`
     margin: 5% 10% 0 10%;    
   `};
 
+  ${media.greaterThan('large')`
+    min-height: 80%;
+    max-height: 80%; 
+    margin-top: 1%;
+  `};
+
   
 `;
 
@@ -31,7 +37,11 @@ export const ParagraphDescription = styled.p`
   `};
 
   ${media.greaterThan('medium')`
-    font-size: 2em;   
+    font-size: 2em;  
+  `};
+
+  ${media.greaterThan('large')`
+    
   `};
 `;
 
@@ -68,6 +78,12 @@ export const ChildContainer = styled.div`
   ${media.greaterThan('medium')`
     min-height: 30em;
   `};
+
+  ${media.greaterThan('large')`
+    min-width: 100%;
+    min-height: 20em;
+    margin-top: 0;
+  `};
   
 `;
 
@@ -83,6 +99,12 @@ export const ChildDescription = styled.div`
   `};
 
   ${media.greaterThan('medium')`
+    font-size: 3em;
+  `};
+
+  ${media.greaterThan('large')`
+    margin-top: 2%;
+    margin-bottom: 2%;
     font-size: 3em;
   `};
 `;

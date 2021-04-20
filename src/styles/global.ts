@@ -47,6 +47,11 @@ export default createGlobalStyle`
       font-size: 2em;
       column-gap: 4em;
     `};
+
+    ${media.greaterThan('large')`
+      font-size: 1.5em;
+      column-gap: 4em;
+    `};
   }
 
   .columns-diets {
@@ -59,6 +64,11 @@ export default createGlobalStyle`
       font-size: 1.5em;
       column-gap: 3em;
     `};
+
+    ${media.greaterThan('large')`
+      font-size: 1.5em;
+      column-gap: 4em;
+    `};
   }
 
   .columns-cuisines {
@@ -70,6 +80,11 @@ export default createGlobalStyle`
     ${media.greaterThan('small')`
       font-size: 1.5em;
       column-gap: 3em;
+    `};
+
+    ${media.greaterThan('large')`
+      font-size: 1.5em;
+      column-gap: 4em;
     `};
   }
 
@@ -119,6 +134,10 @@ export default createGlobalStyle`
     ${media.greaterThan('small')`
       height: 120%;
     `};
+
+    ${media.greaterThan('large')`
+      height: 120%;
+    `};
   }
 
   .top-icon-button-selected {
@@ -129,6 +148,10 @@ export default createGlobalStyle`
     background-color: #ffffff5c;
 
     ${media.greaterThan('small')`
+      height: 120%;
+    `};
+
+    ${media.greaterThan('large')`
       height: 120%;
     `};
   }
@@ -145,6 +168,10 @@ export default createGlobalStyle`
 
   .top-icon-button:first-child {
     border-radius: 10% 0 0 10%;
+
+    ${media.greaterThan('large')`
+
+    `};
   }
 
   .top-icon-button:last-child {
