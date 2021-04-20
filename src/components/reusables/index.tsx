@@ -25,8 +25,7 @@ export const MiscContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 75%;
-  max-height: 75%;
+
   margin: 5%;
   border: 1px solid grey;
   border-radius: 20px;
