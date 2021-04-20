@@ -39,7 +39,7 @@ export const ChildContainer = styled.div`
   min-width: 100%;
   min-height: 18em;
   max-height: 65%;
-  margin-top: 5%;
+  margin-top: 10%;
   border: 0px solid white;
   border-radius: 25px;
 `;
