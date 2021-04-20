@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ParentContainer } from '../reusables';
-import { Menu, ButtonGroup } from './styles';
+import { Menu, ButtonGroup, MealButtonGroup } from './styles';
 import Welcome from './welcome';
 import Intolerances from './intolerances';
 import Diets from './diets';
@@ -215,7 +215,7 @@ const Picker: React.FC = () => {
                 />
             </ButtonGroup>
             }
-          <ButtonGroup>
+          <MealButtonGroup>
             {view === "Meals" &&
             <>
             <IoIosCloseCircleOutline
@@ -234,7 +234,7 @@ const Picker: React.FC = () => {
             </>
             }
             
-          </ButtonGroup>
+          </MealButtonGroup>
         </IconContext.Provider>
       </ParentContainer>
     </>

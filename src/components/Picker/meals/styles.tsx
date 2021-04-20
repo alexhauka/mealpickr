@@ -3,7 +3,7 @@ import { ParagraphDescription } from '../../reusables';
 
 export const Image = styled.img`
   border-radius: 25px;
-  margin-top: 10%;
+  margin-top: 5%;
 `;
 
 export const MealDescription = styled(ParagraphDescription)`
@@ -24,7 +24,6 @@ export const RecipeButton = styled.button`
   width: 10em;
   height: 3em;
   margin: 5%;
-  margin-bottom: 0;
   padding: 1%;
   background-color: white;
   color: black;

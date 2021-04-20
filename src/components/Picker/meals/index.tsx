@@ -25,7 +25,6 @@ const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
   return (
     <>
       <Image src={`${formattedImageURL}`} alt='meal'/>
-      <br />
       <MealDescription>
         {meal.title}
       </MealDescription>
