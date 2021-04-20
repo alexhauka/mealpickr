@@ -11,6 +11,5 @@ export const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  padding-top: 15%;
 `;
 

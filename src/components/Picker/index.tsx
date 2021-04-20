@@ -209,9 +209,11 @@ const Picker: React.FC = () => {
             </Menu>
           }
           {view !== ("Meals" || "Error") &&
-            <IoIosCheckmarkCircle 
-              onClick={(event: React.MouseEvent) => {getMeals()}}
-            />
+            <ButtonGroup>
+                <IoIosCheckmarkCircle 
+                  onClick={(event: React.MouseEvent) => {getMeals()}}
+                />
+            </ButtonGroup>
             }
           <ButtonGroup>
             {view === "Meals" &&
