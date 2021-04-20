@@ -20,6 +20,6 @@ export const Menu = styled.div`
 `;
  
 export const MenuItem = styled.div`
-  margin-right: 10%;
+  margin-right: 20%;
   font-size: 1em;
 `;
