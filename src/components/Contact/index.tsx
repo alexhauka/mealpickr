@@ -1,17 +1,17 @@
 import React from 'react';
-import { ParentContainer } from '../reusables';
+import { MiscContainer } from '../reusables';
 import { ContactInfo, ContactButton } from './styles';
 
 const Contact: React.FC = () => {
   return (
     <>
-      <ParentContainer>
+      <MiscContainer>
         <ContactInfo>
           <ContactButton href="http://github.com/alexhauka">Github</ContactButton>
           <br />
           <ContactButton href="mailto:alexhauka@gmail.com">Email</ContactButton>
         </ContactInfo>
-      </ParentContainer>
+      </MiscContainer>
     </>
   );
 }

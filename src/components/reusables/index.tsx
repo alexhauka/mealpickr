@@ -20,6 +20,19 @@ export const ParagraphDescription = styled.p`
   padding: 5%;
 `;
 
+export const MiscContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75%;
+  max-height: 75%;
+  margin: 5%;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: #f1f1f12b;
+`;
+
 export const ChildContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,6 +50,6 @@ export const ChildDescription = styled.div`
   justify-content: center;
   text-align: center;
   width: 90%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 `;
 
