@@ -18,9 +18,7 @@ export const ParentContainer = styled.div`
     margin: 5% 10% 0 10%;    
   `};
 
-  ${media.greaterThan('medium')`
-    margin: 5% 10% 0 10%;    
-  `};
+  
 `;
 
 export const ParagraphDescription = styled.p`
@@ -30,6 +28,10 @@ export const ParagraphDescription = styled.p`
 
   ${media.greaterThan('small')`
     font-size: 1.5em;
+  `};
+
+  ${media.greaterThan('medium')`
+    font-size: 2em;   
   `};
 `;
 
@@ -62,6 +64,11 @@ export const ChildContainer = styled.div`
   ${media.greaterThan('small')`
     min-height: 25em;
   `};
+
+  ${media.greaterThan('medium')`
+    min-height: 30em;
+  `};
+  
 `;
 
 export const ChildDescription = styled.div`
@@ -73,6 +80,10 @@ export const ChildDescription = styled.div`
 
   ${media.greaterThan('small')`
     font-size: 2em;
+  `};
+
+  ${media.greaterThan('medium')`
+    font-size: 3em;
   `};
 `;
 

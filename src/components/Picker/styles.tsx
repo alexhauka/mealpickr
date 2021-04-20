@@ -43,5 +43,9 @@ export const MealButtonGroup = styled.div`
   justify-content: space-evenly;
   width: 100%;
   margin: 10%;
+
+  ${media.greaterThan('small')`
+    font-size: 1.5em;
+  `};
 `;
 

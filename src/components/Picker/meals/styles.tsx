@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ParagraphDescription } from '../../reusables';
+import { media } from '../../../styles/media';
 
 
 
@@ -19,6 +20,14 @@ export const MealButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  ${media.greaterThan('small')`
+    font-size: 1.16em;
+  `};
+
+  ${media.greaterThan('medium')`
+    font-size: 1.5em;
+  `};
   
 `;
 

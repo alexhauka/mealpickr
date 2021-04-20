@@ -42,6 +42,11 @@ export default createGlobalStyle`
       font-size: 1.5em;
       column-gap: 3em;
     `};
+
+    ${media.greaterThan('medium')`
+      font-size: 2em;
+      column-gap: 4em;
+    `};
   }
 
   .columns-diets {

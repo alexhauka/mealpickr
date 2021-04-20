@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../styles/media';
  
 export const ContactInfo = styled.div`
   display: flex;
@@ -21,4 +22,12 @@ export const ContactButton = styled.a`
   border: 0px solid white;
   border-radius: 25px;
   cursor: pointer;
+
+  ${media.greaterThan('small')`
+    font-size: 1.16em;
+  `};
+
+  ${media.greaterThan('medium')`
+    font-size: 2em;
+  `};
 `;
