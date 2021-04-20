@@ -17,6 +17,10 @@ export const ParentContainer = styled.div`
   ${media.greaterThan('small')`
     margin: 5% 10% 0 10%;    
   `};
+
+  ${media.greaterThan('medium')`
+    margin: 5% 10% 0 10%;    
+  `};
 `;
 
 export const ParagraphDescription = styled.p`
