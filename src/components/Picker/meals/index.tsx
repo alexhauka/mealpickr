@@ -1,6 +1,4 @@
-import React from 'react';
 import { Image, MealDescription, MealButtonGroup, RecipeButton } from './styles';
-
 
 
 
@@ -11,20 +9,28 @@ type MealType = {
   sourceUrl: string
 }
 
+
+
 interface MealProps {
   meal: MealType
 }
 
-
-
 const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
+
   
-  const formattedImageURL = `https://spoonacular.com/recipeImages/${meal.id}-312x231.jpg`;
+  const mobileImageURL = `https://spoonacular.com/recipeImages/${meal.id}-312x231.jpg`
+  const tabletImageURL = `https://spoonacular.com/recipeImages/${meal.id}-480x360.jpg`
+  const desktopImageURL = `https://spoonacular.com/recipeImages/${meal.id}-636x393.jpg`
+  
 
 
   return (
     <>
-      <Image src={`${formattedImageURL}`} alt='meal'/>
+      <Image
+        src={mobileImageURL}
+        srcSet={`${tabletImageURL} 768w, ${desktopImageURL} 992w`}
+        alt={meal.title}
+      />
       <MealDescription>
         {meal.title}
       </MealDescription>

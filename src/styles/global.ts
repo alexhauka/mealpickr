@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import BackgroundImage from '../assets/background.jpg';
+import { media } from '../styles/media';
 
 export default createGlobalStyle`
   * {
@@ -35,6 +36,11 @@ export default createGlobalStyle`
     column-gap: 1em;
     column-width: 7em;
     margin-left: 1em;
+
+    ${media.greaterThan('small')`
+      font-size: 1.5em;
+      column-gap: 3em;
+    `};
   }
 
   .columns-diets {
@@ -42,6 +48,11 @@ export default createGlobalStyle`
     column-gap: 1em;
     column-width: 7em;
     margin-left: 1em;
+
+    ${media.greaterThan('small')`
+      font-size: 1.5em;
+      column-gap: 3em;
+    `};
   }
 
   .columns-cuisines {
@@ -49,14 +60,13 @@ export default createGlobalStyle`
     column-gap: 1em;
     column-width: 7em;
     margin-left: 1em;
+
+    ${media.greaterThan('small')`
+      font-size: 1.5em;
+      column-gap: 3em;
+    `};
   }
 
-  // .columns {
-  //   column-count: 2;
-  //   column-gap: 1em;
-  //   column-width: 7em;
-  //   margin-left: 2em;
-  //   }
 
   ul {
     margin-top: 0;
@@ -87,6 +97,11 @@ export default createGlobalStyle`
   .larger {
     height: 18px;
     width: 18px;
+
+    ${media.greaterThan('small')`
+      height: 25px;
+      width: 25px;
+    `};
   }
 
   .top-icon-button {
@@ -94,6 +109,10 @@ export default createGlobalStyle`
     padding: 0.5%;
     float: left;
     width: 33.3%;
+
+    ${media.greaterThan('small')`
+      height: 120%;
+    `};
   }
 
   .top-icon-button-selected {
@@ -102,6 +121,10 @@ export default createGlobalStyle`
     float: left;
     width: 33.3%;
     background-color: #ffffff5c;
+
+    ${media.greaterThan('small')`
+      height: 120%;
+    `};
   }
 
   .top-icon-button:after {

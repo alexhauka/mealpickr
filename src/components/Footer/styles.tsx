@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../styles/media';
  
 export const Container = styled.div`
   position: absolute;
@@ -16,4 +17,8 @@ export const FooterNav = styled.div`
 export const FooterNavItem = styled.div`
   margin: 5%;
   font-size: 1em;
+
+  ${media.greaterThan('small')`
+    font-size: 1.5em;
+  `};
 `;

@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import { ParagraphDescription } from '../../reusables';
 
+
+
 export const Image = styled.img`
   border-radius: 25px;
-  margin-top: 5%;
+  margin: 5%;
+  min-width: 90%;
+  max-width: 90%;
 `;
 
 export const MealDescription = styled(ParagraphDescription)`
@@ -15,6 +19,7 @@ export const MealButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 `;
 
 export const RecipeButton = styled.button`

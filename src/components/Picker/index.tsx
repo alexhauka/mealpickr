@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ParentContainer } from '../reusables';
-import { Menu, ButtonGroup, MealButtonGroup } from './styles';
+import { Menu, ParameterButtonGroup, MealButtonGroup, CheckmarkButton } from './styles';
 import Welcome from './welcome';
 import Intolerances from './intolerances';
 import Diets from './diets';
@@ -10,6 +10,7 @@ import Meals from './meals';
 import Error from './error';
 import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike, IoIosCloseCircleOutline } from 'react-icons/io';
 import { IconContext } from "react-icons";
+import { media } from '../../styles/media';
 
 const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
@@ -187,11 +188,11 @@ const Picker: React.FC = () => {
       </>
       }
       <IconContext.Provider value={{
-        style: {fontSize: '4em', color: "white", cursor: "pointer"}
+        style: {fontSize: "4em", color: "white", cursor: "pointer"}
       }}>
         {view !== "Meals" &&
           <Menu>
-            <ButtonGroup>
+            <ParameterButtonGroup>
               <IoMdHeartDislike
                 className={view === "Intolerances" ? "top-icon-button-selected" : "top-icon-button"}
                 onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
@@ -204,15 +205,15 @@ const Picker: React.FC = () => {
                 className={view === "Cuisine" ? "top-icon-button-selected" : "top-icon-button"}
                 onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
               />
-            </ButtonGroup>
+            </ParameterButtonGroup>
           </Menu>
         }
         {view !== ("Meals" || "Error") &&
-          <ButtonGroup>
+          <CheckmarkButton>
               <IoIosCheckmarkCircle 
                 onClick={(event: React.MouseEvent) => {getMeals()}}
               />
-          </ButtonGroup>
+          </CheckmarkButton>
           }
         <MealButtonGroup>
           {view === "Meals" &&

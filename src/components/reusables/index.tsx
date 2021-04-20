@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../styles/media';
 
 
 export const ParentContainer = styled.div`
@@ -12,12 +13,20 @@ export const ParentContainer = styled.div`
   border: 1px solid grey;
   border-radius: 20px;
   background-color: #f1f1f12b;
+
+  ${media.greaterThan('small')`
+    margin: 5% 10% 0 10%;    
+  `};
 `;
 
 export const ParagraphDescription = styled.p`
   text-align: center;
   line-height: 1.5em;
   padding: 5%;
+
+  ${media.greaterThan('small')`
+    font-size: 1.5em;
+  `};
 `;
 
 export const MiscContainer = styled.div`
@@ -30,6 +39,10 @@ export const MiscContainer = styled.div`
   border: 1px solid grey;
   border-radius: 20px;
   background-color: #f1f1f12b;
+
+  ${media.greaterThan('small')`
+    margin: 5% 10% 0 10%;    
+  `};
 `;
 
 export const ChildContainer = styled.div`
@@ -38,10 +51,13 @@ export const ChildContainer = styled.div`
   align-items: center;
   min-width: 100%;
   min-height: 18em;
-  max-height: 65%;
   margin-top: 10%;
   border: 0px solid white;
   border-radius: 25px;
+
+  ${media.greaterThan('small')`
+    min-height: 25em;
+  `};
 `;
 
 export const ChildDescription = styled.div`
@@ -50,5 +66,9 @@ export const ChildDescription = styled.div`
   text-align: center;
   width: 90%;
   margin-bottom: 10%;
+
+  ${media.greaterThan('small')`
+    font-size: 2em;
+  `};
 `;
 

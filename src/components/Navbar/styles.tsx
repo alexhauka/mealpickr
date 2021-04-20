@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../styles/media';
  
 export const Container = styled.div`
   position: relative;
@@ -12,6 +13,10 @@ export const Container = styled.div`
 export const Logo = styled.div`
   margin-left: 3%;
   font-size: 1.3em;
+
+  ${media.greaterThan('small')`
+    font-size: 3em;
+  `};
 `;
  
 export const Menu = styled.div`
@@ -22,4 +27,8 @@ export const Menu = styled.div`
 export const MenuItem = styled.div`
   margin-right: 20%;
   font-size: 1em;
+
+  ${media.greaterThan('small')`
+    font-size: 2em;
+  `};
 `;

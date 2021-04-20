@@ -1,14 +1,14 @@
 import React from 'react';
-import { Container, Description } from './styles';
+import { ChildContainer, ChildDescription } from '../../reusables';
 
 const Loading: React.FC = () => {
 
   return (
-    <Container>
-    <Description style={{textAlign: 'center'}}>
+    <ChildContainer>
+    <ChildDescription>
       Loading meals....
-    </Description>
-    </Container>
+    </ChildDescription>
+    </ChildContainer>
   )
 
 }
