@@ -1,16 +1,7 @@
 import styled from 'styled-components';
+import { ParagraphDescription } from '../../reusables';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 90%;
-  height: 50%;
-  border: 0px solid white;
-  border-radius: 25px;
-`;
-
-export const Description = styled.div`
-  width: 90%;
-  margin: 5%;
+export const WelcomeDescription = styled(ParagraphDescription)`
+  width: 100%;
+  margin-top: 10%;
 `;

@@ -37,8 +37,8 @@ export const ChildContainer = styled.div`
   flex-direction: column;
   align-items: center;
   min-width: 100%;
-  min-height: 15em;
-  max-height: 15em;
+  min-height: 18em;
+  max-height: 65%;
   margin-top: 5%;
   border: 0px solid white;
   border-radius: 25px;

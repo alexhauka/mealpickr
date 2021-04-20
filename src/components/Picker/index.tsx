@@ -147,97 +147,94 @@ const Picker: React.FC = () => {
 
 
   return (
-    <>
-      <ParentContainer>
-        {view === "Welcome" && 
-        <>
-          <Welcome />
-        </>}
-        {view === "Intolerances" && 
-        <>
-          <Intolerances
-            intolerances={intolerances}
-            liftIntolerances={setIntolerances}
-          />
-        </>}
-        {view === "Diets" && 
-        <>
-          <Diets
-            diets={diets}
-            liftDiets={setDiets}
-          />
-        </>}
-        {view === "Cuisine" && 
-        <>
-          <Cuisine
-            cuisines={cuisines}
-            liftCuisines={setCuisines}
-          />
-        </>}
-        {view === "Loading" && 
-        <>
-          <Loading />
-        </>}
-        {view === "Meals" && 
-        <>
-          <Meals meal={meals[mealNumber]}/>
-        </>}
-        {view === "Error" &&
-        <>
-          <Error />
-        </>
-        }
-        <IconContext.Provider value={{
-          style: {fontSize: '4em', color: "white", cursor: "pointer"}
-        }}>
-          {view !== "Meals" &&
-            <Menu>
-              <ButtonGroup>
-                <IoMdHeartDislike
-                  className={view === "Intolerances" ? "top-icon-button-selected" : "top-icon-button"}
-                  onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
-                />
-                <IoIosLeaf
-                  className={view === "Diets" ? "top-icon-button-selected" : "top-icon-button"}
-                  onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}
-                />
-                <IoMdPizza
-                  className={view === "Cuisine" ? "top-icon-button-selected" : "top-icon-button"}
-                  onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
-                />
-              </ButtonGroup>
-            </Menu>
-          }
-          {view !== ("Meals" || "Error") &&
+    <ParentContainer>
+      {view === "Welcome" && 
+      <>
+        <Welcome />
+      </>}
+      {view === "Intolerances" && 
+      <>
+        <Intolerances
+          intolerances={intolerances}
+          liftIntolerances={setIntolerances}
+        />
+      </>}
+      {view === "Diets" && 
+      <>
+        <Diets
+          diets={diets}
+          liftDiets={setDiets}
+        />
+      </>}
+      {view === "Cuisine" && 
+      <>
+        <Cuisine
+          cuisines={cuisines}
+          liftCuisines={setCuisines}
+        />
+      </>}
+      {view === "Loading" && 
+      <>
+        <Loading />
+      </>}
+      {view === "Meals" && 
+      <>
+        <Meals meal={meals[mealNumber]}/>
+      </>}
+      {view === "Error" &&
+      <>
+        <Error />
+      </>
+      }
+      <IconContext.Provider value={{
+        style: {fontSize: '4em', color: "white", cursor: "pointer"}
+      }}>
+        {view !== "Meals" &&
+          <Menu>
             <ButtonGroup>
-                <IoIosCheckmarkCircle 
-                  onClick={(event: React.MouseEvent) => {getMeals()}}
-                />
+              <IoMdHeartDislike
+                className={view === "Intolerances" ? "top-icon-button-selected" : "top-icon-button"}
+                onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
+              />
+              <IoIosLeaf
+                className={view === "Diets" ? "top-icon-button-selected" : "top-icon-button"}
+                onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}
+              />
+              <IoMdPizza
+                className={view === "Cuisine" ? "top-icon-button-selected" : "top-icon-button"}
+                onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
+              />
             </ButtonGroup>
-            }
-          <MealButtonGroup>
-            {view === "Meals" &&
-            <>
+          </Menu>
+        }
+        {view !== ("Meals" || "Error") &&
+          <ButtonGroup>
+              <IoIosCheckmarkCircle 
+                onClick={(event: React.MouseEvent) => {getMeals()}}
+              />
+          </ButtonGroup>
+          }
+        <MealButtonGroup>
+          {view === "Meals" &&
+          <>
+          <IoIosCloseCircleOutline
+            onClick={(event: React.MouseEvent) => {setView("Welcome")}}
+          />
+          <IoIosRefreshCircle
+            onClick={(event: React.MouseEvent) => {randomMealID()}}
+          />
+          </>
+          }
+          {view === "Error" &&
+          <>
             <IoIosCloseCircleOutline
-              onClick={(event: React.MouseEvent) => {setView("Welcome")}}
-            />
-            <IoIosRefreshCircle
-              onClick={(event: React.MouseEvent) => {randomMealID()}}
-            />
-            </>
-            }
-            {view === "Error" &&
-            <>
-              <IoIosCloseCircleOutline
-              onClick={(event: React.MouseEvent) => {setView("Welcome")}}
-            />
-            </>
-            }
-            
-          </MealButtonGroup>
-        </IconContext.Provider>
-      </ParentContainer>
-    </>
+            onClick={(event: React.MouseEvent) => {setView("Welcome")}}
+          />
+          </>
+          }
+        </MealButtonGroup>
+      </IconContext.Provider>
+    </ParentContainer>
   );
 }
 
