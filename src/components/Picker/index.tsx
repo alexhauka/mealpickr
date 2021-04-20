@@ -10,7 +10,6 @@ import Meals from './meals';
 import Error from './error';
 import { IoIosLeaf, IoMdPizza, IoIosRefreshCircle, IoIosCheckmarkCircle, IoMdHeartDislike, IoIosCloseCircleOutline } from 'react-icons/io';
 import { IconContext } from "react-icons";
-import { media } from '../../styles/media';
 
 const Picker: React.FC = () => {
   const [view, setView] = useState("Welcome")
