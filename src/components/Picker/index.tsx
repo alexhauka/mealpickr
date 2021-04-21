@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ParentContainer } from '../reusables';
-import { Menu, ParameterButtonGroup, MealButtonGroup, LargeMediaParameterButtonGroup, LargeMediaParameterButton, CheckmarkButton, LargeMediaCheckMarkButtonGroup, LargeMediaCheckMarkButton, LargeMealButtonGroup, LargeMealButton } from './styles';
+import { Menu, ParameterButtonGroup, MealButtonGroup, LargeMediaParameterButtonGroup, LargeMediaParameterButton, CheckmarkButton, LargeMediaCheckMarkButtonGroup, LargeMediaCheckMarkButton, LargeMealButtonGroup, LargeMealButton, LargeErrorContainer } from './styles';
 import Welcome from './welcome';
 import Intolerances from './intolerances';
 import Diets from './diets';
@@ -234,7 +234,7 @@ const Picker: React.FC = () => {
             </LargeMediaCheckMarkButtonGroup>
           </Menu>
         }
-        {view !== ("Meals" || "Error") &&
+        {view !== ("Meals" && "Error") &&
           <CheckmarkButton>
               <IoIosCheckmarkCircle 
                 onClick={(event: React.MouseEvent) => {getMeals()}}
@@ -267,11 +267,11 @@ const Picker: React.FC = () => {
           </>
           }
           {view === "Error" &&
-          <>
+          <LargeErrorContainer>
             <IoIosCloseCircleOutline
             onClick={(event: React.MouseEvent) => {setView("Welcome")}}
           />
-          </>
+          </LargeErrorContainer>
           }
       </IconContext.Provider>
     </ParentContainer>

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Container, Description } from './styles';
+import { ChildContainer, ChildDescription } from '../../reusables';
 
 const Error: React.FC = () => {
 
   return (
-    <Container>
-      <Description>
-        Sorry, no meal were found with those filters. Please remove some and try again.
-      </Description>
-    </Container>
+    <ChildContainer>
+      <ChildDescription>
+        Sorry, no meal were found with those parameters. Please remove some and try again.
+      </ChildDescription>
+    </ChildContainer>
   )
 }
 

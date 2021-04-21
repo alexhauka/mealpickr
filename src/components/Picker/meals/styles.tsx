@@ -36,6 +36,7 @@ export const RecipeButtonGroup = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   ${media.greaterThan('small')`
     font-size: 1.16em;
@@ -55,7 +56,7 @@ export const RecipeButton = styled.button`
   width: 10em;
   height: 3em;
   margin: 5%;
-  padding: 1%;
+  padding: 10%;
   background-color: white;
   color: black;
   border: 0px solid white;

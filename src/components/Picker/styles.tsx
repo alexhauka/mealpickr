@@ -206,3 +206,11 @@ export const LargeMealButton = styled.button`
 
   `;
 
+  export const LargeErrorContainer = styled.div`
+    
+    ${media.greaterThan('large')`
+      display: none;
+    `};
+  
+  `;
+

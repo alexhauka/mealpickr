@@ -28,6 +28,7 @@ export const FooterNavItem = styled.div`
   font-size: 1em;
 
   ${media.greaterThan('small')`
+    margin: 4.5%;
     font-size: 1.5em;
   `};
 
