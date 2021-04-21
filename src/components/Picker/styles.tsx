@@ -29,7 +29,7 @@ export const ParameterButtonGroup = styled.div`
   height: 5em;
 
   ${media.greaterThan('small')`
-    height: 4em;
+    height: 3em;
     margin: 5%;
   `};
 
@@ -97,9 +97,9 @@ export const CheckmarkButton = styled.div`
   font-size: 1.5em;
 
   ${media.greaterThan('small')`
-    height: 4em;
-    margin-top: 5%;
-    font-size: 1.8em;
+    height: 6em;
+    margin-top: 0%;
+    font-size: 1.5em;
   `};
 
   ${media.greaterThan('large')`

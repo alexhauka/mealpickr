@@ -185,14 +185,19 @@ export default createGlobalStyle`
   .top-icon-button:first-child {
     border-radius: 10% 0 0 10%;
 
-    ${media.greaterThan('large')`
-
+    ${media.greaterThan('small')`
+      border-radius: 1rem 0 0 1rem;
     `};
   }
 
   .top-icon-button:last-child {
     border-radius: 0 10% 10% 0;
+
+    ${media.greaterThan('small')`
+      border-radius: 0 1rem 1rem 0;
+    `};
   }
+  
 
   .top-icon-button:not(:last-child) {
     border-right: none;
@@ -210,10 +215,18 @@ export default createGlobalStyle`
 
   .top-icon-button-selected:first-child {
     border-radius: 10% 0 0 10%;
+
+    ${media.greaterThan('small')`
+      border-radius: 1rem 0 0 1rem;
+    `};
   }
 
   .top-icon-button-selected:last-child {
     border-radius: 0 10% 10% 0;
+
+    ${media.greaterThan('small')`
+      border-radius: 0 1rem 1rem 0;
+    `};
   }
 
   .top-icon-button-selected:not(:last-child) {

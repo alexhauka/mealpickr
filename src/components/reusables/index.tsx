@@ -74,10 +74,12 @@ export const ChildContainer = styled.div`
 
   ${media.greaterThan('small')`
     min-height: 25em;
+    max-height: 25em;
   `};
 
   ${media.greaterThan('medium')`
     min-height: 30em;
+    max-height: 30em;
   `};
 
   ${media.greaterThan('large')`
