@@ -234,7 +234,7 @@ const Picker: React.FC = () => {
             </LargeMediaCheckMarkButtonGroup>
           </Menu>
         }
-        {view !== ("Meals" && "Error") &&
+        {view !== "Meals" && view !== "Error" &&
           <CheckmarkButton>
               <IoIosCheckmarkCircle 
                 onClick={(event: React.MouseEvent) => {getMeals()}}

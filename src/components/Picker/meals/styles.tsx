@@ -9,6 +9,11 @@ export const Image = styled.img`
   min-width: 90%;
   max-width: 90%;
 
+  ${media.greaterThan('small')`
+  min-width: 55%;
+  max-width: 55%;
+  `};
+
   ${media.greaterThan('large')`
     border-radius: 25px;
     margin: 0%;
