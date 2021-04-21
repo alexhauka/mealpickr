@@ -10,6 +10,16 @@ export const Menu = styled.div`
   ${media.greaterThan('small')`
     min-width: 75%;
   `};
+
+  ${media.greaterThan('large')`
+    margin-top: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `};
+
+  
+  
 `;
 
 export const ParameterButtonGroup = styled.div`
@@ -23,9 +33,59 @@ export const ParameterButtonGroup = styled.div`
     margin: 5%;
   `};
 
+  ${media.greaterThan('medium')`
+    height: 5.5em;
+    margin-top: 15%;
+  `};
+
   ${media.greaterThan('large')`
-    height: 9em;
-    margin-top: 10%;
+    display: none;
+  `};
+`;
+
+export const LargeMediaParameterButtonGroup = styled.div`
+  display: none;
+
+  ${media.greaterThan('large')`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    padding: 1%;
+    border: 0px;
+    border-style: double;
+    border-radius: 0em;
+  `};
+
+`;
+
+export const LargeMediaParameterButton = styled.button`
+  display: none;
+
+  ${media.greaterThan('large')`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: #FFF;
+    background-color: #ffffff00;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #FFF;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+
+    :hover {
+      color: black;
+      box-shadow: inset 0 100px 0 0 #FFF;
+    }
   `};
 `;
 
@@ -43,9 +103,48 @@ export const CheckmarkButton = styled.div`
   `};
 
   ${media.greaterThan('large')`
-    height: 4em;
-    margin-top: 0;
-    font-size: 1.8em;
+    display: none;
+  `};
+`;
+
+export const LargeMediaCheckMarkButtonGroup = styled.div`
+    display: none;
+
+    ${media.greaterThan('large')`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `};
+`;
+
+export const LargeMediaCheckMarkButton = styled.button`
+  display: none;
+
+  ${media.greaterThan('large')`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20%;
+    margin-bottom: 60%;
+    color: #FFF;
+    background-color: #ffffff00;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    padding: 50% 17%;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #FFF;
+    -webkit-transition: ease-out 0.2s;
+    -moz-transition: ease-out 0.2s;
+    transition: ease-out 0.2s;
+
+    :hover {
+      color: black;
+      box-shadow: inset 0 130px 0 0 #FFF;
+    }
   `};
 `;
 
@@ -58,5 +157,52 @@ export const MealButtonGroup = styled.div`
   ${media.greaterThan('small')`
     font-size: 1.5em;
   `};
+
+  ${media.greaterThan('large')`
+    display: none;
+  `};
 `;
+
+export const LargeMealButtonGroup = styled.div`
+  display: none;
+
+  ${media.greaterThan('large')`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 60%;
+    margin-bottom: 10%;
+  `};
+`;
+
+export const LargeMealButton = styled.button`
+  display: none;
+
+  ${media.greaterThan('large')`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25%;
+    color: #FFF;
+    background-color: #ffffff00;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #FFF;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+
+    :hover {
+      color: black;
+      box-shadow: inset 0 100px 0 0 #FFF;
+    }
+  `}
+
+  `;
 

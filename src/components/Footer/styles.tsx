@@ -17,6 +17,10 @@ export const Container = styled.div`
 export const FooterNav = styled.div`
   display: flex;
   justify-content: center;
+
+  ${media.greaterThan('large')`
+    justify-content: space-evenly;
+  `};
 `;
  
 export const FooterNavItem = styled.div`
@@ -26,4 +30,6 @@ export const FooterNavItem = styled.div`
   ${media.greaterThan('small')`
     font-size: 1.5em;
   `};
+
+  
 `;

@@ -1,4 +1,4 @@
-import { Image, MealDescription, MealButtonGroup, RecipeButton } from './styles';
+import { Image, MealDescription, RecipeButtonGroup, RecipeButton } from './styles';
 
 
 
@@ -34,11 +34,18 @@ const Meals: React.FC<MealProps> = ({ meal }): JSX.Element => {
       <MealDescription>
         {meal.title}
       </MealDescription>
-      <MealButtonGroup>
-        <RecipeButton as="a" href ={`${meal.sourceUrl}`}>
+      
+      <RecipeButtonGroup>
+        <RecipeButton 
+        as="a"
+        href ={`${meal.sourceUrl}` }
+        target="_blank"
+        >
           Go To Recipe
         </RecipeButton>
-      </MealButtonGroup>
+      </RecipeButtonGroup>
+
+      
     </>
   )
 

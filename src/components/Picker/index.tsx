@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ParentContainer } from '../reusables';
-import { Menu, ParameterButtonGroup, MealButtonGroup, CheckmarkButton } from './styles';
+import { Menu, ParameterButtonGroup, MealButtonGroup, LargeMediaParameterButtonGroup, LargeMediaParameterButton, CheckmarkButton, LargeMediaCheckMarkButtonGroup, LargeMediaCheckMarkButton, LargeMealButtonGroup, LargeMealButton } from './styles';
 import Welcome from './welcome';
 import Intolerances from './intolerances';
 import Diets from './diets';
@@ -191,6 +191,26 @@ const Picker: React.FC = () => {
       }}>
         {view !== "Meals" &&
           <Menu>
+            <LargeMediaParameterButtonGroup>
+              <LargeMediaParameterButton
+              className={view === "Intolerances" ? "large-parameter-button-selected" : "large-parameter-button"}
+              onClick={(event: React.MouseEvent) => {view !== "Intolerances" ? setView("Intolerances") : setView("Welcome")}}
+              >
+                Intolerances
+              </LargeMediaParameterButton>
+              <LargeMediaParameterButton
+              className={view === "Diets" ? "large-parameter-button-selected" : "large-parameter-button"}
+              onClick={(event: React.MouseEvent) => {view !== "Diets" ? setView("Diets") : setView("Welcome")}}
+              >
+                Dietary
+              </LargeMediaParameterButton>
+              <LargeMediaParameterButton
+              className={view === "Cuisine" ? "large-parameter-button-selected" : "large-parameter-button"}
+              onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
+              >
+                Cuisine
+              </LargeMediaParameterButton>
+            </LargeMediaParameterButtonGroup>
             <ParameterButtonGroup>
               <IoMdHeartDislike
                 className={view === "Intolerances" ? "top-icon-button-selected" : "top-icon-button"}
@@ -205,6 +225,13 @@ const Picker: React.FC = () => {
                 onClick={(event: React.MouseEvent) => {view !== "Cuisine" ? setView("Cuisine") : setView("Welcome")}}
               />
             </ParameterButtonGroup>
+            <LargeMediaCheckMarkButtonGroup>
+              <LargeMediaCheckMarkButton
+              onClick={(event: React.MouseEvent) => {getMeals()}}
+              >
+                mealpick!
+              </LargeMediaCheckMarkButton>
+            </LargeMediaCheckMarkButtonGroup>
           </Menu>
         }
         {view !== ("Meals" || "Error") &&
@@ -214,15 +241,29 @@ const Picker: React.FC = () => {
               />
           </CheckmarkButton>
           }
-        <MealButtonGroup>
           {view === "Meals" &&
           <>
+          <LargeMealButtonGroup>
+            <LargeMealButton
+            onClick={(event: React.MouseEvent) => {setView("Welcome")}}
+            >
+              Go Back
+            </LargeMealButton>
+            <LargeMealButton
+            onClick={(event: React.MouseEvent) => {randomMealID()}}
+            >
+              Re-Roll
+            </LargeMealButton>
+          </LargeMealButtonGroup>
+          <MealButtonGroup>
           <IoIosCloseCircleOutline
             onClick={(event: React.MouseEvent) => {setView("Welcome")}}
           />
           <IoIosRefreshCircle
             onClick={(event: React.MouseEvent) => {randomMealID()}}
           />
+          
+          </MealButtonGroup>
           </>
           }
           {view === "Error" &&
@@ -232,7 +273,6 @@ const Picker: React.FC = () => {
           />
           </>
           }
-        </MealButtonGroup>
       </IconContext.Provider>
     </ParentContainer>
   );

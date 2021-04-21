@@ -35,4 +35,26 @@ export const ContactButton = styled.a`
   ${media.greaterThan('medium')`
     font-size: 2em;
   `};
+
+  ${media.greaterThan('large')`
+  min-width: 25%;
+  color: #FFF;
+  background-color: #ffffff00;
+  border: 2px solid #FFF;
+  border-radius: 10px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #FFF;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+
+  :hover {
+    color: black;
+    box-shadow: inset 0 100px 0 0 #FFF;
+  }
+  `};
 `;

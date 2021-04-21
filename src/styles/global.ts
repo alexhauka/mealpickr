@@ -49,8 +49,9 @@ export default createGlobalStyle`
     `};
 
     ${media.greaterThan('large')`
-      font-size: 1.5em;
-      column-gap: 4em;
+      column-count: 2;
+      font-size: 1.2em;
+      column-gap: 10em;
     `};
   }
 
@@ -65,9 +66,15 @@ export default createGlobalStyle`
       column-gap: 3em;
     `};
 
-    ${media.greaterThan('large')`
-      font-size: 1.5em;
+    ${media.greaterThan('medium')`
+      font-size: 2em;
       column-gap: 4em;
+    `};
+
+    ${media.greaterThan('large')`
+      column-count: 2;
+      font-size: 1.2em;
+      column-gap: 10em;
     `};
   }
 
@@ -82,9 +89,15 @@ export default createGlobalStyle`
       column-gap: 3em;
     `};
 
-    ${media.greaterThan('large')`
-      font-size: 1.5em;
+    ${media.greaterThan('medium')`
+      font-size: 2em;
       column-gap: 4em;
+    `};
+
+    ${media.greaterThan('large')`
+      column-count: 2;
+      font-size: 1.2em;
+      column-gap: 10em;
     `};
   }
 
@@ -106,6 +119,9 @@ export default createGlobalStyle`
     align-items: flex-end;
     font-size: smaller;
     margin-bottom: 15%;
+
+    ${media.greaterThan('large')`
+    `};
   }
 
   .cuisine-list {
@@ -120,8 +136,8 @@ export default createGlobalStyle`
     width: 18px;
 
     ${media.greaterThan('small')`
-      height: 25px;
-      width: 25px;
+      height: 20px;
+      width: 20px;
     `};
   }
 
@@ -202,5 +218,17 @@ export default createGlobalStyle`
 
   .top-icon-button-selected:not(:last-child) {
     border-right: none;
+  }
+
+  .large-parameter-button {
+
+  }
+
+  .large-parameter-button-selected {
+    background-color: #FFF;
+    color: black;
+    -webkit-transition: ease-out 0s;
+    -moz-transition: ease-out 0s;
+    transition: ease-out 0s;
   }
 `;

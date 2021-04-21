@@ -19,9 +19,11 @@ export const ParentContainer = styled.div`
   `};
 
   ${media.greaterThan('large')`
+    margin: 0% 0% 0% 20%;
     min-height: 80%;
     max-height: 80%; 
-    margin-top: 1%;
+    min-width: 60%;
+    max-width: 60%;
   `};
 
   
@@ -41,7 +43,6 @@ export const ParagraphDescription = styled.p`
   `};
 
   ${media.greaterThan('large')`
-    
   `};
 `;
 
@@ -104,8 +105,8 @@ export const ChildDescription = styled.div`
 
   ${media.greaterThan('large')`
     margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 3em;
+    margin-bottom: 5%;
+    font-size: 2.3em;
   `};
 `;
 
