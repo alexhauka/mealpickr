@@ -15,6 +15,16 @@ export const WelcomeDescription = styled(ParagraphDescription)`
   `};
 
   ${media.greaterThan('large')`
+    display: none;
+  `};
+`;
+
+
+export const LargeWelcomeDescription = styled(ParagraphDescription)`
+  display: none;
+
+  ${media.greaterThan('large')`
+    display: flex;
     min-width: 100%;
     margin-top: 0;
     font-size: 2.2em; 
