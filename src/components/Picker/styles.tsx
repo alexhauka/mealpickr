@@ -25,8 +25,10 @@ export const Menu = styled.div`
 export const ParameterButtonGroup = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
-  height: 5em;
+  min-width: 90%;
+  max-width: 90%;
+  min-height: 5rem;
+  max-height: 5rem;
 
   ${media.greaterThan('small')`
     height: 3em;

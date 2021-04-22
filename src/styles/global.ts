@@ -111,14 +111,14 @@ export default createGlobalStyle`
     display: flex;
     align-items: flex-end;
     font-size: smaller;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
 
   .diets-list {
     display: flex;
     align-items: flex-end;
     font-size: smaller;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 
     ${media.greaterThan('large')`
     `};
@@ -128,7 +128,7 @@ export default createGlobalStyle`
     display: flex;
     align-items: flex-end;
     font-size: smaller;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
 
   .larger {

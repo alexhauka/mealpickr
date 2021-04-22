@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { media } from '../../styles/media';
  
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  margin-bottom: 1%;
+  margin-bottom: 0%;
   height: 10%;
   width: 100%;
   color: #F1F1F1;
@@ -16,7 +16,8 @@ export const Container = styled.div`
  
 export const FooterNav = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: row;
 
   ${media.greaterThan('large')`
     justify-content: space-evenly;
@@ -24,7 +25,7 @@ export const FooterNav = styled.div`
 `;
  
 export const FooterNavItem = styled.div`
-  margin: 5%;
+  margin: 0%;
   font-size: 1em;
 
   ${media.greaterThan('small')`

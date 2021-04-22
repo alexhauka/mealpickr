@@ -67,8 +67,10 @@ export const ChildContainer = styled.div`
   flex-direction: column;
   align-items: center;
   min-width: 100%;
-  min-height: 18em;
-  margin-top: 10%;
+  max-width: 100%;
+  min-height: 50%;
+  max-height: 50%;
+  margin-top: 3%;
   border: 0px solid white;
   border-radius: 25px;
 
@@ -95,7 +97,7 @@ export const ChildDescription = styled.div`
   justify-content: center;
   text-align: center;
   width: 90%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 
   ${media.greaterThan('small')`
     font-size: 2em;
