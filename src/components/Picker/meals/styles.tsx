@@ -10,8 +10,8 @@ export const Image = styled.img`
   max-width: 90%;
 
   ${media.greaterThan('small')`
-  min-width: 55%;
-  max-width: 55%;
+    min-width: 80%;
+    max-width: 80%;
   `};
 
   ${media.greaterThan('large')`
