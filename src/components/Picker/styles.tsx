@@ -94,7 +94,7 @@ export const CheckmarkButton = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  height: 5em;
+  height: 0em;
   font-size: 1.5em;
   margin-bottom: 5em;
 
