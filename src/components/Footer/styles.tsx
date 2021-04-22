@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media } from '../../styles/media';
  
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 10%;
   width: 100%;
