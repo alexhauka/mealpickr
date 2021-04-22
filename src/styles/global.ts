@@ -16,6 +16,9 @@ export default createGlobalStyle`
     margin: 0 auto;
     height: 100vh;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
   }
  
   html {
