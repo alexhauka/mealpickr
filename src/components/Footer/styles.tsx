@@ -4,7 +4,6 @@ import { media } from '../../styles/media';
 export const Container = styled.div`
   position: fixed;
   bottom: 0;
-  height: 10%;
   width: 100%;
   color: #F1F1F1;
 

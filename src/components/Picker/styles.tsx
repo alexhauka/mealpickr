@@ -27,8 +27,7 @@ export const ParameterButtonGroup = styled.div`
   justify-content: space-evenly;
   min-width: 90%;
   max-width: 90%;
-  min-height: 4rem;
-  max-height: 4rem;
+  min-height: 5rem;
 
   ${media.greaterThan('small')`
     height: 3em;
@@ -97,6 +96,7 @@ export const CheckmarkButton = styled.div`
   width: 100%;
   height: 5em;
   font-size: 1.5em;
+  margin-bottom: 5em;
 
   ${media.greaterThan('small')`
     height: 6em;

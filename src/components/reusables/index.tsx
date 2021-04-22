@@ -7,9 +7,9 @@ export const ParentContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 75%;
-  max-height: 75%;
-  margin: 5%;
+  min-height: 70%;
+  max-height: 70%;
+  margin: 0% 5% 0% 5%;
   border: 1px solid grey;
   border-radius: 20px;
   background-color: #f1f1f12b;
@@ -71,6 +71,7 @@ export const ChildContainer = styled.div`
   min-height: 12rem;
   max-height: 12rem;
   margin-top: 3%;
+  margin-bottom: 10%;
   border: 0px solid white;
   border-radius: 25px;
 
