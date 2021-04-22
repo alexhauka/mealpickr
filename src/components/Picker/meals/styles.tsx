@@ -75,9 +75,20 @@ export const RecipeButton = styled.button`
   border-radius: 25px;
   cursor: pointer;
 
+  ${media.between('half', 'medium')`
+    margin-bottom: -40%;
+    position: relative;
+    z-index: 1;
+  `};
+
+  ${media.greaterThan('medium')`
+    margin-bottom: 0%;
+  `};
+
   ${media.greaterThan('large')`
     width: 165px;
     height: 150px;
+    margin-bottom: 0%;
     position: relative;
     top: 50px;
     z-index: 1;

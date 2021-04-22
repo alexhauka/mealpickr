@@ -161,6 +161,11 @@ export const MealButtonGroup = styled.div`
     font-size: 1.5em;
   `};
 
+  ${media.between('half', 'medium')`
+    position: relative;
+    top: -85px;
+  `};
+
   ${media.greaterThan('large')`
     display: none;
   `};

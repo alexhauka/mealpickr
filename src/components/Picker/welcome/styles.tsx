@@ -26,7 +26,7 @@ export const LargeWelcomeDescription = styled(ParagraphDescription)`
   ${media.greaterThan('large')`
     display: flex;
     min-width: 100%;
-    margin-top: 0;
-    font-size: 2.2em; 
+    margin-top: 5%;
+    font-size: 1.5em; 
   `};
 `;
