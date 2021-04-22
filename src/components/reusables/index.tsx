@@ -87,8 +87,10 @@ export const ChildContainer = styled.div`
 
   ${media.greaterThan('large')`
     min-width: 100%;
-    min-height: 20em;
+    min-height: 17em;
+    max-height: 17em;
     margin-top: 0;
+    margin-bottom: 0%;
   `};
   
 `;
@@ -110,7 +112,7 @@ export const ChildDescription = styled.div`
 
   ${media.greaterThan('large')`
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
     font-size: 2.3em;
   `};
 `;

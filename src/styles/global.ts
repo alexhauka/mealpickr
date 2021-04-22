@@ -54,7 +54,7 @@ export default createGlobalStyle`
 
     ${media.greaterThan('large')`
       column-count: 2;
-      font-size: 1.2em;
+      font-size: 1.5em;
       column-gap: 10em;
     `};
   }
@@ -77,7 +77,7 @@ export default createGlobalStyle`
 
     ${media.greaterThan('large')`
       column-count: 2;
-      font-size: 1.2em;
+      font-size: 1.5em;
       column-gap: 10em;
     `};
   }
@@ -100,7 +100,7 @@ export default createGlobalStyle`
 
     ${media.greaterThan('large')`
       column-count: 2;
-      font-size: 1.2em;
+      font-size: 1.5em;
       column-gap: 10em;
     `};
   }
