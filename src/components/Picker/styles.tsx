@@ -128,7 +128,7 @@ export const LargeMediaCheckMarkButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -20%;
+    margin-top: -50%;
     margin-bottom: 60%;
     color: #FFF;
     background-color: #ffffff00;
@@ -176,6 +176,8 @@ export const LargeMealButtonGroup = styled.div`
     align-items: center;
     min-width: 60%;
     margin-bottom: 10%;
+    position: relative;
+    bottom: 50px;
   `};
 `;
 

@@ -33,6 +33,7 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
     color: white;
+    display: block;
   }
 
   .columns-intolerances {

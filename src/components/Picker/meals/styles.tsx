@@ -10,6 +10,7 @@ export const Image = styled.img`
   max-width: 90%;
 
   ${media.greaterThan('small')`
+    margin: 1%;
     min-width: 80%;
     max-width: 80%;
   `};
@@ -29,11 +30,16 @@ export const MealDescription = styled(ParagraphDescription)`
   max-height: 2.5em;
   font-size: .8em;
 
+  ${media.greaterThan('small')`
+    font-size: 1.5em;
+  `};
+
   ${media.greaterThan('large')`
     padding: 0;
     min-height: 5%;
     max-height: 5%;
     max-width: 60%;
+    font-size: 2em;
   `};
 `;
 
@@ -73,7 +79,8 @@ export const RecipeButton = styled.button`
     width: 165px;
     height: 150px;
     position: relative;
-    top: 115px;
+    top: 50px;
+    z-index: 1;
     color: #FFF;
     background-color: #ffffff00;
     border: 2px solid #FFF;
