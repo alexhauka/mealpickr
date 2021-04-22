@@ -76,8 +76,8 @@ export const ChildContainer = styled.div`
   border-radius: 25px;
 
   ${media.greaterThan('small')`
-    min-height: 25em;
-    max-height: 25em;
+    min-height: 15rem;
+    max-height: 15rem;
   `};
 
   ${media.greaterThan('medium')`

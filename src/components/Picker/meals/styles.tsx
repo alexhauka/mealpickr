@@ -5,7 +5,7 @@ import { media } from '../../../styles/media';
 
 export const Image = styled.img`
   border-radius: 25px;
-  margin: 5%;
+  margin: 3%;
   min-width: 90%;
   max-width: 90%;
 
@@ -24,12 +24,13 @@ export const Image = styled.img`
 `;
 
 export const MealDescription = styled(ParagraphDescription)`
-  min-height: 5em;
-  max-height: 5em;
+  margin-bottom: 10%;
+  min-height: 2.5em;
+  max-height: 2.5em;
+  font-size: .8em;
 
   ${media.greaterThan('large')`
     padding: 0;
-    margin-top: 3%;
     min-height: 5%;
     max-height: 5%;
     max-width: 60%;
@@ -60,7 +61,7 @@ export const RecipeButtonGroup = styled.div`
 export const RecipeButton = styled.button`
   width: 10em;
   height: 3em;
-  margin: 5%;
+  margin: 0%;
   padding: 10%;
   background-color: white;
   color: black;
