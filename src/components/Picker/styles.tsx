@@ -27,8 +27,8 @@ export const ParameterButtonGroup = styled.div`
   justify-content: space-evenly;
   min-width: 90%;
   max-width: 90%;
-  min-height: 5rem;
-  max-height: 5rem;
+  min-height: 4rem;
+  max-height: 4rem;
 
   ${media.greaterThan('small')`
     height: 3em;

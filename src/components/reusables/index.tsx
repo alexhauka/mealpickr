@@ -68,8 +68,8 @@ export const ChildContainer = styled.div`
   align-items: center;
   min-width: 100%;
   max-width: 100%;
-  min-height: 50%;
-  max-height: 50%;
+  min-height: 12rem;
+  max-height: 12rem;
   margin-top: 3%;
   border: 0px solid white;
   border-radius: 25px;
