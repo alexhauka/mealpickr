@@ -11,6 +11,11 @@ export default createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     color: white;
   }
+
+  body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
  
   #root {
     margin: 0 auto;
@@ -27,6 +32,7 @@ export default createGlobalStyle`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;  
+    height: -webkit-fill-available;
     overflow: hidden;  
   }
 
